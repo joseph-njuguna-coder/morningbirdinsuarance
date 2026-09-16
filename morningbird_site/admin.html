@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
   <title>Morning Bird — Blog Admin</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Inline SVG logo styling for Admin portal */
+    /* Inline SVG Logo & Brand Styling */
     .brand-svg-group {
       display: inline-flex;
       align-items: center;
@@ -28,100 +29,447 @@
       font-size: 1.15rem;
       line-height: 1.1;
       letter-spacing: -0.01em;
-      color: #B81D24;
+      color: #8c4a53;
     }
     .brand-suffix {
       font-family: 'IBM Plex Sans', sans-serif;
       font-size: 0.68rem;
       font-weight: 600;
-      color: #002B66;
+      color: #0f1c3f;
       letter-spacing: 0.04em;
     }
     .brand-tagline {
       font-family: 'Fraunces', serif, sans-serif;
       font-style: italic;
       font-size: 0.62rem;
-      color: #002B66;
+      color: #8c4a53;
+    }
+
+    /* Admin UI Enhancements */
+    .admin-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      margin-top: 35px;
+    }
+    @media (max-width: 900px) {
+      .admin-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+    .admin-card {
+      background: #fff;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(15,28,63,0.03);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      font: inherit;
+      background: #fafbfc;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #8c4a53;
+      background: #fff;
+    }
+    .admin-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .post-list-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .post-list-item h4 {
+      font-size: 1.05rem;
+      color: var(--ink);
+      margin-bottom: 4px;
+      font-family: 'Fraunces', serif;
+    }
+    .post-meta-tag {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .btn-sm {
+      padding: 6px 12px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      border-radius: 2px;
+      border: 1px solid var(--line);
+      background: #fff;
+      transition: background 0.2s;
+    }
+    .btn-sm:hover {
+      background: #f0f2f5;
+    }
+    .btn-danger {
+      color: #b32d2e;
+      border-color: #f7d7d7;
+    }
+    .btn-danger:hover {
+      background: #fdf2f2;
+    }
+    .toolbar-box {
+      background: #f7f9fc;
+      padding: 16px;
+      border-radius: 4px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      border: 1px solid var(--line);
+    }
+    #status-toast {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #2e7d32;
+      transition: opacity 0.3s ease;
     }
   </style>
 </head>
 <body>
 
 <header class="site-header">
-  <!-- Embedded SVG Logo Mark in Admin Header -->
   <a class="brand brand-svg-group" href="index.html">
-    <svg class="brand-logo-svg" viewBox="0 0 260 180" fill="none">
-      <path d="M 12 115 C 40 50, 110 15, 220 15 C 235 15, 248 17, 260 20 C 180 32, 110 75, 75 118 C 50 118, 28 118, 12 115 Z" fill="#C81D25" />
-      <path d="M 75 118 C 110 75, 180 32, 260 20 C 230 40, 180 85, 120 135 C 75 172, 30 185, 0 180 C 25 170, 50 148, 75 118 Z" fill="#0D3B9C" />
+    <svg class="brand-logo-svg" viewBox="0 0 340 140" fill="none" aria-hidden="true">
+      <path d="M 25 90 C 70 20, 180 5, 330 30 C 270 45, 160 55, 95 102 C 70 102, 45 100, 25 90 Z" fill="#8c4a53" />
+      <path d="M 95 102 C 160 55, 270 45, 330 30 C 290 60, 200 100, 110 135 C 75 145, 35 140, 0 130 C 30 120, 65 112, 95 102 Z" fill="#0f1c3f" />
     </svg>
     <div class="brand-text-block">
       <span class="brand-name">MORNING BIRD</span>
       <span class="brand-suffix">BLOG ADMIN</span>
-      <span class="brand-tagline">WE INSURE KENYA</span>
+      <span class="brand-tagline"><i>WE INSURE KENYA</i></span>
     </div>
   </a>
   <nav>
-    <a href="blog.html">View Blog</a>
-    <a href="index.html">Website</a>
+    <a href="blog.html" target="_blank">View Live Blog ↗</a>
+    <a href="index.html">Website Home</a>
   </nav>
 </header>
 
 <main class="section paper">
-  <div class="section-label">CONTENT MANAGEMENT</div>
+  <div class="section-label">CONTENT MANAGEMENT SYSTEM</div>
   <div>
-    <h1 style="font-size:52px;color:var(--navy);margin-bottom:12px">Manage Journal</h1>
-    <p style="color:var(--muted)">Demo content manager. Posts are stored in this browser using localStorage. Connect this interface to a secure database/authentication before production.</p>
+    <h1 style="font-size:clamp(32px,4vw,48px);color:var(--ink);margin-bottom:8px;font-family:'Fraunces',serif;">Manage Journal Articles</h1>
+    <p style="color:var(--text-muted);max-width:700px;">Create, edit, or remove articles published on the Morning Bird Journal. Changes sync locally in your browser instantly.</p>
     
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:35px">
-      <form id="form" style="background:white;padding:30px;border:1px solid var(--line)">
-        <input type="hidden" id="editSlug">
-        
-        <label>Title
-          <input id="title" required style="display:block;width:100%;padding:12px;margin:6px 0 18px">
+    <!-- Data Export/Import Toolbar -->
+    <div class="toolbar-box">
+      <div style="font-size:0.9rem;color:var(--ink);">
+        <b>Data Sync & Backup:</b> Export your posts as a JSON backup or restore a previous file.
+      </div>
+      <div style="display:flex;gap:8px;">
+        <button class="btn-sm" onclick="exportData()">Export JSON</button>
+        <label class="btn-sm" style="cursor:pointer;margin:0;display:inline-flex;align-items:center;">
+          Import JSON <input type="file" id="importFile" accept=".json" style="display:none" onchange="importData(event)">
         </label>
-        
-        <label>Category
-          <select id="cat" style="display:block;width:100%;padding:12px;margin:6px 0 18px">
-            <option>Motor Insurance</option>
-            <option>Health Insurance</option>
-            <option>Property & Home</option>
-            <option>SME & Business</option>
-            <option>Travel</option>
-            <option>Agriculture</option>
-            <option>Insurance Education</option>
-          </select>
-        </label>
-        
-        <label>Excerpt
-          <textarea id="excerpt" required rows="3" style="display:block;width:100%;padding:12px;margin:6px 0 18px"></textarea>
-        </label>
-        
-        <label>Article content
-          <textarea id="content" required rows="10" placeholder="One paragraph per line" style="display:block;width:100%;padding:12px;margin:6px 0 18px"></textarea>
-        </label>
-        
-        <button class="btn btn-dark" type="submit">Save Article</button>
-        <button class="btn" type="button" onclick="resetForm()">Clear</button>
-        <p id="status" style="color:var(--gold)"></p>
-      </form>
+        <button class="btn-sm btn-danger" onclick="resetDefaults()">Reset Seeds</button>
+      </div>
+    </div>
+
+    <div class="admin-layout">
+      <!-- Article Form Editor -->
+      <div class="admin-card">
+        <h2 id="form-heading" style="font-size:1.4rem;font-family:'Fraunces',serif;margin-bottom:20px;color:var(--ink);">New Article Entry</h2>
+        <form id="form">
+          <input type="hidden" id="editSlug">
+          
+          <div class="form-group">
+            <label for="title">Article Title</label>
+            <input id="title" required placeholder="e.g. Understanding Comprehensive Car Cover">
+          </div>
+          
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div class="form-group">
+              <label for="cat">Category</label>
+              <select id="cat">
+                <option>Motor Insurance</option>
+                <option>Health Insurance</option>
+                <option>Property & Home</option>
+                <option>SME & Business</option>
+                <option>Travel</option>
+                <option>Agriculture</option>
+                <option>Insurance Education</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="readTime">Read Time</label>
+              <input id="readTime" value="4 min read" placeholder="e.g. 4 min read">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="date">Publication Date</label>
+            <input type="date" id="postDate" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="excerpt">Short Excerpt (Summary for Cards)</label>
+            <textarea id="excerpt" required rows="2" placeholder="Brief summary appearing on the main blog feed..."></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="content">Article Paragraphs <small style="font-weight:normal;color:var(--text-muted);">(One paragraph per line)</small></label>
+            <textarea id="content" required rows="8" placeholder="Type or paste the first paragraph here...&#10;Type the second paragraph on a new line..."></textarea>
+          </div>
+          
+          <div class="admin-actions">
+            <button class="btn btn-dark" type="submit" style="background:var(--ink);color:#fff;padding:12px 24px;border:none;border-radius:2px;cursor:pointer;font-weight:500;">Save & Publish</button>
+            <button class="btn btn-sm" type="button" onclick="resetForm()">Cancel / Clear</button>
+            <span id="status-toast"></span>
+          </div>
+        </form>
+      </div>
       
-      <div>
-        <h2 style="font-size:34px">Published & draft articles</h2>
-        <div id="admin-list" style="margin-top:20px"></div>
+      <!-- Article Management List -->
+      <div class="admin-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+          <h2 style="font-size:1.4rem;font-family:'Fraunces',serif;color:var(--ink);">Published Articles</h2>
+          <span id="post-count" class="post-meta-tag" style="font-weight:600;">0 posts</span>
+        </div>
+        <div id="admin-list" style="max-height:600px;overflow-y:auto;padding-right:4px;"></div>
       </div>
     </div>
   </div>
 </main>
 
 <script>
-const seeds=[{slug:'choosing-motor-cover-kenya',title:'How to choose the right motor insurance cover in Kenya',category:'Motor Insurance',date:'2026-09-02',readTime:'5 min read',excerpt:'Third-party, third-party fire and theft, or comprehensive — understand what each option is designed to protect.',content:['Every driver needs at least the legally required third-party protection.','Before buying, compare benefits, exclusions, excess and claims requirements — not just price.']},{slug:'travel-insurance-what-it-covers',title:'Travel insurance: what your policy actually covers',category:'Travel',date:'2026-08-19',readTime:'4 min read',excerpt:'A plain-language guide to common travel protections.',content:['Travel policies commonly combine emergency medical, cancellation, curtailment and baggage protections.']}];
-function posts(){try{return JSON.parse(localStorage.getItem('mb_posts'))||seeds}catch{return seeds}}
-function save(x){localStorage.setItem('mb_posts',JSON.stringify(x))}
-function render(){document.getElementById('admin-list').innerHTML=posts().map(p=>`<div style="padding:18px 0;border-bottom:1px solid var(--line)"><b>${p.title}</b><p style="margin:5px 0;color:var(--muted)">${p.category} · ${p.date||'draft'}</p><button onclick="edit('${p.slug}')">Edit</button> <button onclick="del('${p.slug}')">Delete</button></div>`).join('')}
-function edit(slug){const p=posts().find(x=>x.slug===slug);if(!p)return;editSlug.value=p.slug;title.value=p.title;cat.value=p.category;excerpt.value=p.excerpt;content.value=(p.content||[]).join('\n')}
-function del(slug){if(confirm('Delete this article?')){save(posts().filter(p=>p.slug!==slug));render()}}
-function resetForm(){document.getElementById('form').reset();editSlug.value=''}
-document.getElementById('form').onsubmit=e=>{e.preventDefault();let arr=posts(),slug=editSlug.value||title.value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');const obj={slug,title:title.value,category:cat.value,date:new Date().toISOString().slice(0,10),readTime:'5 min read',excerpt:excerpt.value,content:content.value.split('\n').filter(Boolean)};const i=arr.findIndex(p=>p.slug===slug);if(i>=0)arr[i]=obj;else arr.unshift(obj);save(arr);status.textContent='Article saved.';resetForm();render()};render();
+  const SEED_POSTS = [
+    {
+      slug: "understanding-motor-insurance-kenya",
+      category: "Motor Insurance",
+      date: "2026-05-12",
+      readTime: "4 min read",
+      title: "Understanding Motor Insurance Options in Kenya",
+      excerpt: "Third-party vs. comprehensive cover: what you need to know before insuring your vehicle.",
+      content: [
+        "Every driver needs at least the legally required third-party protection. The right level of cover, however, depends on the vehicle, its value and the risks you want to transfer.",
+        "Third-party cover protects against liability to other people and property. Comprehensive cover can also protect your own vehicle against accidental damage, theft and other insured risks, subject to the policy terms.",
+        "Before buying, compare the benefits, exclusions, excess, vehicle valuation requirements and claims process — not just the premium."
+      ]
+    },
+    {
+      slug: "travel-insurance-requirements-kenya",
+      category: "Travel",
+      date: "2026-04-20",
+      readTime: "3 min read",
+      title: "What to Look for in Travel Insurance",
+      excerpt: "Essential medical and baggage cover considerations when traveling internationally from Kenya.",
+      content: [
+        "Travel policies commonly combine several protections, including emergency medical expenses, cancellation or curtailment and baggage-related risks.",
+        "Always check the limits, exclusions and destination requirements before travelling. If insurance is required for a visa, confirm the certificate meets the relevant requirements."
+      ]
+    },
+    {
+      slug: "inpatient-vs-outpatient-medical-cover",
+      category: "Health Insurance",
+      date: "2026-03-15",
+      readTime: "5 min read",
+      title: "Inpatient vs. Outpatient Health Cover",
+      excerpt: "Navigating medical insurance choices for individuals and families in Kenya.",
+      content: [
+        "Inpatient cover is designed for treatment that requires hospital admission, while outpatient cover generally applies to consultations, tests and treatment that does not require admission.",
+        "The best choice depends on your budget, health needs and the benefits offered by the specific policy. Read the schedule and exclusions carefully before deciding."
+      ]
+    }
+  ];
+
+  function getPosts() {
+    try {
+      const data = localStorage.getItem('mb_posts');
+      return data ? JSON.parse(data) : SEED_POSTS;
+    } catch {
+      return SEED_POSTS;
+    }
+  }
+
+  function savePosts(postsArray) {
+    localStorage.setItem('mb_posts', JSON.stringify(postsArray));
+  }
+
+  function showToast(msg) {
+    const t = document.getElementById('status-toast');
+    t.textContent = msg;
+    t.style.opacity = '1';
+    setTimeout(() => { t.style.opacity = '0'; }, 3000);
+  }
+
+  function renderAdminList() {
+    const posts = getPosts();
+    document.getElementById('post-count').textContent = `${posts.length} post${posts.length === 1 ? '' : 's'}`;
+    
+    const listEl = document.getElementById('admin-list');
+    if (posts.length === 0) {
+      listEl.innerHTML = '<p style="color:var(--text-muted);text-align:center;padding:30px 0;">No articles found. Create your first post using the form.</p>';
+      return;
+    }
+
+    listEl.innerHTML = posts.map(p => `
+      <div class="post-list-item">
+        <div>
+          <h4>${p.title}</h4>
+          <div class="post-meta-tag">${p.category} &bull; ${p.date || 'Draft'} &bull; ${p.readTime || ''}</div>
+        </div>
+        <div style="display:flex;gap:6px;flex:none;">
+          <button class="btn-sm" onclick="editPost('${p.slug}')">Edit</button>
+          <button class="btn-sm btn-danger" onclick="deletePost('${p.slug}')">Delete</button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function editPost(slug) {
+    const posts = getPosts();
+    const p = posts.find(x => x.slug === slug);
+    if (!p) return;
+
+    document.getElementById('editSlug').value = p.slug;
+    document.getElementById('title').value = p.title;
+    document.getElementById('cat').value = p.category;
+    document.getElementById('readTime').value = p.readTime || '4 min read';
+    document.getElementById('postDate').value = p.date || new Date().toISOString().slice(0, 10);
+    document.getElementById('excerpt').value = p.excerpt;
+    document.getElementById('content').value = (p.content || []).join('\n');
+    
+    document.getElementById('form-heading').textContent = 'Edit Article';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    showToast('Loaded article for editing.');
+  }
+
+  function deletePost(slug) {
+    if (confirm('Are you sure you want to delete this article?')) {
+      const posts = getPosts().filter(p => p.slug !== slug);
+      savePosts(posts);
+      renderAdminList();
+      showToast('Article deleted.');
+    }
+  }
+
+  function resetForm() {
+    document.getElementById('form').reset();
+    document.getElementById('editSlug').value = '';
+    document.getElementById('postDate').value = new Date().toISOString().slice(0, 10);
+    document.getElementById('form-heading').textContent = 'New Article Entry';
+  }
+
+  function resetDefaults() {
+    if (confirm('Reset to default seed articles? This will overwrite current custom articles.')) {
+      savePosts(SEED_POSTS);
+      renderAdminList();
+      resetForm();
+      showToast('Restored default seed articles.');
+    }
+  }
+
+  function exportData() {
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(getPosts(), null, 2));
+    const dlAnchor = document.createElement('a');
+    dlAnchor.setAttribute("href", dataStr);
+    dlAnchor.setAttribute("download", "morning_bird_blog_backup.json");
+    document.body.appendChild(dlAnchor);
+    dlAnchor.click();
+    dlAnchor.remove();
+    showToast('Exported backup successfully.');
+  }
+
+  function importData(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      try {
+        const imported = JSON.parse(e.target.result);
+        if (Array.isArray(imported)) {
+          savePosts(imported);
+          renderAdminList();
+          resetForm();
+          showToast('Articles imported successfully!');
+        } else {
+          alert('Invalid format inside JSON file.');
+        }
+      } catch (err) {
+        alert('Error parsing JSON file.');
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  // Form submission handler
+  document.getElementById('form').onsubmit = function(e) {
+    e.preventDefault();
+    
+    const titleVal = document.getElementById('title').value.trim();
+    const existingSlug = document.getElementById('editSlug').value;
+    
+    // Generate clean URL slug if creating new or if title changes significantly
+    const slug = existingSlug || titleVal.toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
+
+    const articleObj = {
+      slug: slug,
+      title: titleVal,
+      category: document.getElementById('cat').value,
+      date: document.getElementById('postDate').value,
+      readTime: document.getElementById('readTime').value.trim() || '4 min read',
+      excerpt: document.getElementById('excerpt').value.trim(),
+      content: document.getElementById('content').value.split('\n').map(s => s.trim()).filter(Boolean)
+    };
+
+    let posts = getPosts();
+    const index = posts.findIndex(p => p.slug === slug);
+    
+    if (index >= 0) {
+      posts[index] = articleObj;
+    } else {
+      // Check for slug collision, append suffix if needed
+      let finalSlug = slug;
+      if (posts.some(p => p.slug === finalSlug)) {
+        finalSlug = slug + '-' + Date.now().toString().slice(-4);
+        articleObj.slug = finalSlug;
+      }
+      posts.unshift(articleObj);
+    }
+
+    savePosts(posts);
+    renderAdminList();
+    resetForm();
+    showToast('Article saved successfully!');
+  };
+
+  // Initialize date field with today on load
+  document.getElementById('postDate').value = new Date().toISOString().slice(0, 10);
+  renderAdminList();
 </script>
 
 </body>

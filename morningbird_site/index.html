@@ -3,23 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morning Bird Insurance — Cover that rises with you</title>
+<title>Morning Bird Insurance Services | We Insure Kenya</title>
+
+<!-- Primary SEO Meta Tags -->
+<meta name="title" content="Morning Bird Insurance Services | We Insure Kenya">
+<meta name="description" content="Looking for reliable insurance in Kenya? Morning Bird Insurance Services offers expert motor, medical, marine, fire, and corporate cover near Zetech University, Thika Road. Get a fast quote today.">
+<meta name="keywords" content="insurance Kenya, motor insurance Nairobi, medical cover Kenya, insurance broker Thika Road, Morning Bird Insurance Services, WIBA insurance Kenya, general insurance agency Nairobi">
+<meta name="author" content="Morning Bird Insurance Services">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://morningbirdinsurance.co.ke/">
+
+<!-- Open Graph / Facebook / WhatsApp Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://morningbirdinsurance.co.ke/">
+<meta property="og:title" content="Morning Bird Insurance Services | We Insure Kenya">
+<meta property="og:description" content="Independent insurance intermediary in Kenya. Motor, medical, marine, fire, and pension solutions tailored for you. Get a quote today!">
+<meta property="og:image" content="https://morningbirdinsurance.co.ke/images/image1.png">
+<meta property="og:site_name" content="Morning Bird Insurance">
+<meta property="og:locale" content="en_KE">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://morningbirdinsurance.co.ke/">
+<meta name="twitter:title" content="Morning Bird Insurance Services | We Insure Kenya">
+<meta name="twitter:description" content="Independent insurance intermediary in Kenya. Motor, medical, marine, fire, and pension solutions tailored for you.">
+<meta name="twitter:image" content="https://morningbirdinsurance.co.ke/images/image1.png">
+
+<!-- Local SEO Geo Tags -->
+<meta name="geo.region" content="KE-30">
+<meta name="geo.placename" content="Nairobi, Thika Road">
+<meta name="geo.position" content="-1.2186;36.9015">
+<meta name="ICBM" content="-1.2186, 36.9015">
+
+<!-- Schema.org Structured Data for Local SEO & Rich Snippets -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "InsuranceAgency",
+  "name": "Morning Bird Insurance Services",
+  "image": "https://morningbirdinsurance.co.ke/images/image1.png",
+  "@id": "https://morningbirdinsurance.co.ke/#agency",
+  "url": "https://morningbirdinsurance.co.ke/",
+  "telephone": "+254720498193",
+  "email": "info@morningbirdinsurance.co.ke",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bazaar Motors, Off Thika Super Highway, Next to Zetech University",
+    "addressLocality": "Nairobi",
+    "addressRegion": "Kiambu / Nairobi",
+    "postalCode": "00100",
+    "addressCountry": "KE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -1.2186,
+    "longitude": 36.9015
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "08:00",
+    "closes": "17:30"
+  },
+  "sameAs": [
+    "https://www.facebook.com/p/Morning-Bird-Insurance-Services-100034989714204/",
+    "https://ke.linkedin.com/in/lawrence-kamau-8261991b6"
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#122142;
-    --ink-soft:#1c2f57;
-    --plum:#5c3c58;
-    --amber:#dc9c3f;
-    --amber-soft:#f1c37c;
-    --sky:#eef1ec;
-    --paper:#f8f5ee;
-    --text:#182238;
-    --text-muted:#57627a;
-    --line: rgba(18,33,66,0.14);
-    --line-light: rgba(248,245,238,0.28);
+    --ink:#0f1c3f;              /* Deep Navy Blue */
+    --ink-soft:#182b58;         /* Lighter Navy Blue */
+    --pale-red:#8c4a53;         /* Refined Pale Red / Dusty Rose */
+    --pale-red-soft:#a9636c;    /* Soft Hover Pale Red */
+    --sky:#edf1f6;              /* Pale Blue-Grey Background */
+    --paper:#f7f9fc;            /* Crisp Blue-Tinted Paper White */
+    --text:#131c36;             /* Deep Blue Ink Text */
+    --text-muted:#54617c;       /* Slate Blue Muted Text */
+    --line: rgba(15,28,63,0.12);
+    --line-light: rgba(247,249,252,0.24);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -40,14 +115,27 @@
     color:var(--ink);
   }
   a{color:inherit;}
-  img,svg{display:block;max-width:100%;}
+  
+  img,svg{display:block;max-width:100%;height:auto;}
+  .brand-logo-svg{width:64px;height:26px;flex:none;}
+
   .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
-  .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+
+  /* ---------- Top IRA Regulatory Bar ---------- */
+  .ira-bar{
+    background:var(--pale-red);
+    color:var(--paper);
+    font-size:0.75rem;
+    text-align:center;
+    padding:6px 16px;
+    font-weight:500;
+    letter-spacing:0.02em;
+  }
 
   /* ---------- Header ---------- */
   header{
     position:sticky;top:0;z-index:40;
-    background:rgba(238,241,236,0.92);
+    background:rgba(237,241,246,0.92);
     backdrop-filter:blur(8px);
     border-bottom:1px solid var(--line);
   }
@@ -57,14 +145,13 @@
     max-width:1180px;margin:0 auto;
   }
   .brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
-  .brand-logo-svg{width:38px;height: auto;flex:none;}
   .brand-text{display:flex;flex-direction:column;}
-  .brand-name{font-family:"Fraunces", serif;font-weight:700;font-size:1.15rem;line-height:1.1;letter-spacing:-0.01em;color:#B81D24;}
-  .brand-suffix{font-family:"IBM Plex Sans", sans-serif;font-size:0.68rem;font-weight:600;color:#002B66;letter-spacing:0.04em;}
-  .brand-tagline{font-family:"Fraunces", serif;font-style:italic;font-size:0.62rem;color:#002B66;}
+  .brand-name{font-family:"Fraunces", serif;font-weight:700;font-size:1.15rem;line-height:1.1;letter-spacing:-0.01em;color:var(--pale-red);}
+  .brand-suffix{font-family:"IBM Plex Sans", sans-serif;font-size:0.68rem;font-weight:600;color:var(--ink);letter-spacing:0.04em;}
+  .brand-tagline{font-family:"Fraunces", serif;font-style:italic;font-size:0.58rem;color:var(--pale-red);white-space:nowrap;}
   nav.primary{display:flex;align-items:center;gap:30px;}
   nav.primary a{font-size:0.94rem;text-decoration:none;color:var(--ink-soft);border-bottom:1px solid transparent;padding-bottom:2px;transition:border-color .15s ease;}
-  nav.primary a:hover{border-bottom-color:var(--amber);}
+  nav.primary a:hover{border-bottom-color:var(--pale-red);}
   .call-btn{
     display:flex;align-items:center;gap:9px;
     background:var(--ink);color:var(--paper);
@@ -74,51 +161,42 @@
   }
   .call-btn svg{width:15px;height:15px;flex:none;}
 
-  /* ---------- Hero / masthead ---------- */
+  /* ---------- Hero ---------- */
   .hero{
     position:relative;
-    background:linear-gradient(180deg, var(--ink) 0%, var(--ink-soft) 38%, var(--plum) 78%, var(--amber) 130%);
     color:var(--paper);
     overflow:hidden;
+    background: linear-gradient(135deg, #0f1c3f 0%, #1c2f5d 45%, #6a3d46 80%, #522d35 100%);
   }
+
   .hero-inner{
-    max-width:1180px;margin:0 auto;padding:48px 32px 0;
+    max-width:1180px;margin:0 auto;padding:56px 32px 0;
     position:relative;z-index:2;
   }
-  .masthead-row{
-    display:flex;align-items:center;justify-content:space-between;
-    border-bottom:1px solid var(--line-light);
-    padding-bottom:18px;
-  }
-  .hero-brand-block{display:flex;align-items:center;gap:18px;}
-  .hero-logo-svg{width:64px;height:auto;}
-  .hero-brand-titles{display:flex;flex-direction:column;}
-  .hero-brand-title{font-family:"Fraunces", serif;font-weight:700;font-size:2rem;line-height:1;color:#FFD1D3;letter-spacing:0.02em;}
-  .hero-brand-sub{font-family:"IBM Plex Sans", sans-serif;font-weight:600;font-size:0.95rem;color:#A1C4FF;letter-spacing:0.05em;}
-  .hero-brand-tagline{font-family:"Fraunces", serif;font-style:italic;font-size:0.85rem;color:var(--amber-soft);}
-  .edition-line{
-    font-size:0.78rem;color:var(--amber-soft);
-    letter-spacing:0.03em;text-align:right;
-    font-family:"IBM Plex Sans", sans-serif;
-  }
   .hero-rule{
-    height:1px;background:var(--amber);
+    height:1px;background:var(--pale-red-soft);
     transform-origin:left;transform:scaleX(0);
     animation:draw-rule 1.1s .15s cubic-bezier(.3,.7,.2,1) forwards;
+    margin-top:24px;
   }
-  @media (prefers-reduced-motion:reduce){.hero-rule{animation:none;transform:scaleX(1);}}
   @keyframes draw-rule{to{transform:scaleX(1);}}
 
   .hero-grid{
-    display:grid;grid-template-columns:1.15fr 0.85fr;gap:56px;
-    padding:56px 0 72px;align-items:center;
+    display:grid;grid-template-columns:1fr 1.1fr;gap:48px;
+    padding:40px 0 0;align-items:stretch;
+  }
+  .hero-content-col{
+    padding:32px 0 60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
   }
   .hero-copy h1{
     font-size:3.1rem;line-height:1.06;color:var(--paper);
     max-width:11ch;
   }
   .hero-copy p{
-    margin:22px 0 0;font-size:1.08rem;color:rgba(248,245,238,0.82);
+    margin:22px 0 0;font-size:1.08rem;color:rgba(247,249,252,0.82);
     max-width:38ch;
   }
   .hero-ctas{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
@@ -127,94 +205,161 @@
     padding:13px 24px;border-radius:2px;font-size:0.95rem;font-weight:500;
     text-decoration:none;border:1px solid transparent;
   }
-  .btn-primary{background:var(--amber);color:var(--ink);}
-  .btn-primary:hover{background:var(--amber-soft);}
-  .btn-ghost{border-color:rgba(248,245,238,0.5);color:var(--paper);}
+  .btn-primary{background:var(--pale-red);color:var(--paper);}
+  .btn-primary:hover{background:var(--pale-red-soft);}
+  .btn-ghost{border-color:rgba(247,249,252,0.4);color:var(--paper);}
   .btn-ghost:hover{border-color:var(--paper);}
   .hero-trust{
-    margin-top:34px;font-size:0.82rem;color:rgba(248,245,238,0.65);
+    margin-top:34px;font-size:0.82rem;color:rgba(247,249,252,0.65);
     display:flex;align-items:center;gap:10px;
   }
   .hero-trust svg{width:14px;height:14px;flex:none;}
 
-  .hero-art{
-    position:relative;aspect-ratio:1/1.02;
-    border:1px solid rgba(248,245,238,0.35);
-    animation:rise 1s .35s cubic-bezier(.2,.7,.25,1) both;
+  /* ---------- Slider Column ---------- */
+  .hero-image-col{
+    position:relative;
+    min-height:480px;
+    border-top-left-radius:12px;
+    border-top-right-radius:12px;
+    overflow:hidden;
+    box-shadow: 0 20px 40px rgba(15,28,63,0.3);
+    background:#081024;
   }
-  @media (prefers-reduced-motion:reduce){.hero-art{animation:none;}}
-  @keyframes rise{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
-  .hero-art-caption{
-    position:absolute;left:0;right:0;bottom:-30px;
-    font-size:0.72rem;color:rgba(248,245,238,0.55);
-    display:flex;justify-content:space-between;
+  .hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  .hero-slide.active {
+    opacity: 1;
+  }
+  .hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .hero-slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+    background: rgba(15,28,63,0.45);
+    padding: 6px 12px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+  }
+  .hero-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .hero-dot.active {
+    background: var(--pale-red-soft);
   }
 
-  /* ---------- Section basics ---------- */
+  /* ---------- Sections ---------- */
   section{padding:88px 0;}
   .section-head{max-width:52ch;margin-bottom:52px;}
   .kicker{
-    font-size:0.78rem;color:var(--plum);font-weight:600;
-    margin-bottom:10px;letter-spacing:0.01em;
+    font-size:0.78rem;color:var(--pale-red);font-weight:600;
+    margin-bottom:10px;letter-spacing:0.02em;text-transform:uppercase;
   }
   .section-head h2{font-size:2.05rem;line-height:1.16;}
   .section-head p{margin:16px 0 0;color:var(--text-muted);font-size:1.02rem;max-width:46ch;}
 
   /* ---------- Products ---------- */
   .products{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .product-index{border-top:1px solid var(--line);}
-  .product-row{
-    display:grid;grid-template-columns:1fr 1fr;gap:0 48px;
-    border-bottom:1px solid var(--line);
-  }
-  .product-item{
-    display:grid;grid-template-columns:auto 1fr;gap:20px;
-    padding:30px 0;border-top:1px solid var(--line);
-  }
-  .product-row .product-item:nth-child(1){border-top:none;}
-  .product-row .product-item:nth-child(2){border-top:none;}
-  .product-icon{width:34px;height:34px;flex:none;margin-top:2px;color:var(--plum);}
-  .product-item h3{font-size:1.18rem;font-weight:600;margin-bottom:7px;}
-  .product-item p{margin:0;color:var(--text-muted);font-size:0.94rem;max-width:40ch;}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+  .service-card{background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;}
+  .service-img-container{width:100%;height:180px;overflow:hidden;background:#d8e2ed;position:relative;}
+  .service-img-container img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease;}
+  .service-card:hover .service-img-container img{transform:scale(1.04);}
+  .service-content{padding:24px;display:flex;flex-direction:column;flex-grow:1;}
+  .service-content h3{font-size:1.18rem;font-weight:600;margin-bottom:8px;}
+  .service-content p{margin:0 0 16px 0;color:var(--text-muted);font-size:0.92rem;flex-grow:1;}
+  .service-link{font-size:0.85rem;color:var(--pale-red);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
+  .service-link:hover{color:var(--ink);}
 
   /* ---------- Why us ---------- */
   .why{background:var(--sky);}
   .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
-  .why-card{border-top:1px solid var(--ink);padding-top:20px;}
-  .why-card .why-index{font-family:"Fraunces",serif;font-size:0.85rem;color:var(--plum);margin-bottom:14px;display:block;}
+  .why-card{border-top:1px solid var(--pale-red);padding-top:20px;}
+  .why-card .why-index{font-family:"Fraunces",serif;font-size:0.85rem;color:var(--pale-red);margin-bottom:14px;display:block;font-weight:600;}
   .why-card h3{font-size:1.15rem;margin-bottom:10px;}
   .why-card p{margin:0;color:var(--text-muted);font-size:0.95rem;}
 
   /* ---------- How it works ---------- */
   .how{background:var(--paper);border-top:1px solid var(--line);}
-  .how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
-  .how-num{
-    font-family:"Fraunces",serif;font-size:2.6rem;color:var(--amber);
-    line-height:1;margin-bottom:16px;font-weight:500;
-  }
-  .how-step h3{font-size:1.1rem;margin-bottom:8px;}
-  .how-step p{margin:0;color:var(--text-muted);font-size:0.94rem;}
+  .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+  .how-card{background:var(--sky);border:1px solid var(--line);border-radius:4px;overflow:hidden;}
+  .how-card img{width:100%;height:160px;object-fit:cover;}
+  .how-card-body{padding:24px;}
+  .how-num{font-family:"Fraunces",serif;font-size:2rem;color:var(--pale-red);line-height:1;margin-bottom:12px;font-weight:500;}
+  .how-card-body h3{font-size:1.1rem;margin-bottom:8px;}
+  .how-card-body p{margin:0;color:var(--text-muted);font-size:0.92rem;}
 
-  /* ---------- Journal preview ---------- */
+  /* ---------- Journal Preview ---------- */
   .journal{background:var(--sky);}
   .journal-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:52px;gap:20px;flex-wrap:wrap;}
   .journal-head .section-head{margin-bottom:0;}
-  .journal-all{font-size:0.9rem;color:var(--ink);border-bottom:1px solid var(--amber);text-decoration:none;white-space:nowrap;padding-bottom:2px;}
+  .journal-all{font-size:0.9rem;color:var(--ink);border-bottom:1px solid var(--pale-red);text-decoration:none;white-space:nowrap;padding-bottom:2px;}
   .journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;border-top:1px solid var(--line);padding-top:36px;}
-  .journal-card{text-decoration:none;color:inherit;}
-  .journal-card .post-meta{font-size:0.76rem;color:var(--plum);font-weight:600;margin-bottom:10px;}
+  .journal-card{text-decoration:none;color:inherit;background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden;transition:transform .2s ease;}
+  .journal-card:hover{transform:translateY(-3px);}
+  .journal-img-wrap{width:100%;aspect-ratio:16/9;overflow:hidden;background:#d8e2ed;}
+  .journal-img-wrap img{width:100%;height:100%;object-fit:cover;}
+  .journal-content{padding:24px;}
+  .journal-card .post-meta{font-size:0.76rem;color:var(--pale-red);font-weight:600;margin-bottom:10px;}
   .journal-card .post-meta .dot{margin:0 7px;color:var(--text-muted);font-weight:400;}
   .journal-card h3{font-size:1.12rem;line-height:1.28;margin-bottom:10px;}
   .journal-card p{margin:0;color:var(--text-muted);font-size:0.92rem;}
   @media (max-width:860px){.journal-grid{grid-template-columns:1fr;gap:28px;}}
 
-  /* ---------- Partners strip ---------- */
-  .partners{background:var(--ink);color:var(--paper);padding:44px 0;}
-  .partners-inner{display:flex;align-items:center;gap:40px;flex-wrap:wrap;justify-content:space-between;}
-  .partners-label{font-size:0.82rem;color:rgba(248,245,238,0.6);white-space:nowrap;}
-  .partner-names{display:flex;gap:34px;flex-wrap:wrap;font-family:"Fraunces",serif;font-size:1.05rem;color:rgba(248,245,238,0.85);}
+  /* ---------- Partners with Logo Emblems ---------- */
+  .partners{background:var(--ink);color:var(--paper);padding:50px 0;}
+  .partners-inner{display:flex;align-items:center;gap:30px;flex-wrap:wrap;justify-content:space-between;}
+  .partners-label{font-size:0.82rem;color:rgba(247,249,252,0.6);white-space:nowrap;max-width:220px;line-height:1.4;}
+  .partner-logos{display:flex;gap:24px;flex-wrap:wrap;align-items:center;justify-content:flex-end;}
+  .partner-badge{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.12);
+    padding:10px 18px;
+    border-radius:4px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    transition:all 0.2s ease;
+  }
+  .partner-badge:hover{
+    background:rgba(255,255,255,0.1);
+    border-color:var(--pale-red-soft);
+  }
+  .partner-badge span{
+    font-family:"Fraunces",serif;
+    font-size:1.02rem;
+    font-weight:600;
+    color:rgba(247,249,252,0.9);
+    letter-spacing:-0.01em;
+  }
+  .partner-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--pale-red);
+  }
 
-  /* ---------- Quote form ---------- */
+  /* ---------- Quote / SEM Conversion Form ---------- */
   .quote{background:var(--sky);}
   .quote-panel{
     background:var(--ink);color:var(--paper);
@@ -223,29 +368,29 @@
   }
   .quote-intro{padding:56px;border-right:1px solid var(--line-light);}
   .quote-intro h2{color:var(--paper);font-size:1.9rem;line-height:1.15;}
-  .quote-intro p{color:rgba(248,245,238,0.75);margin-top:16px;font-size:0.98rem;max-width:34ch;}
-  .quote-contact{margin-top:34px;font-size:0.92rem;color:rgba(248,245,238,0.85);}
+  .quote-intro p{color:rgba(247,249,252,0.75);margin-top:16px;font-size:0.98rem;max-width:34ch;}
+  .quote-contact{margin-top:34px;font-size:0.92rem;color:rgba(247,249,252,0.85);}
   .quote-contact div{margin-bottom:8px;}
   .quote-form{padding:56px;display:grid;gap:18px;}
   .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-  label{display:block;font-size:0.78rem;color:var(--amber-soft);margin-bottom:7px;letter-spacing:0.01em;}
+  label{display:block;font-size:0.78rem;color:var(--pale-red-soft);margin-bottom:7px;letter-spacing:0.02em;font-weight:600;}
   input, select, textarea{
-    width:100%;background:transparent;border:none;border-bottom:1px solid rgba(248,245,238,0.35);
+    width:100%;background:transparent;border:none;border-bottom:1px solid rgba(247,249,252,0.35);
     color:var(--paper);font-family:"IBM Plex Sans",sans-serif;font-size:0.96rem;padding:9px 2px;
   }
   select option{color:var(--ink);}
-  input::placeholder, textarea::placeholder{color:rgba(248,245,238,0.4);}
-  input:focus, select:focus, textarea:focus{outline:none;border-bottom-color:var(--amber);}
+  input::placeholder, textarea::placeholder{color:rgba(247,249,252,0.4);}
+  input:focus, select:focus, textarea:focus{outline:none;border-bottom-color:var(--pale-red-soft);}
   textarea{resize:vertical;min-height:64px;}
   .quote-submit{
     margin-top:8px;justify-self:start;
-    background:var(--amber);color:var(--ink);border:none;
+    background:var(--pale-red);color:var(--paper);border:none;
     padding:13px 26px;font-size:0.95rem;font-weight:600;border-radius:2px;cursor:pointer;
   }
-  .quote-submit:hover{background:var(--amber-soft);}
-  .quote-note{font-size:0.78rem;color:rgba(248,245,238,0.5);margin-top:4px;}
+  .quote-submit:hover{background:var(--pale-red-soft);}
+  .quote-note{font-size:0.78rem;color:rgba(247,249,252,0.5);margin-top:4px;}
 
-  /* ---------- Floating WhatsApp Button ---------- */
+  /* ---------- Floating WhatsApp ---------- */
   .whatsapp-float {
     position: fixed;
     bottom: 24px;
@@ -256,7 +401,7 @@
     color: #FFF;
     border-radius: 50px;
     text-align: center;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+    box-shadow: 0px 4px 12px rgba(15,28,63,0.25);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -266,7 +411,7 @@
   }
   .whatsapp-float:hover {
     transform: scale(1.08);
-    box-shadow: 0px 6px 16px rgba(0,0,0,0.35);
+    box-shadow: 0px 6px 16px rgba(15,28,63,0.35);
   }
   .whatsapp-float svg {
     width: 32px;
@@ -275,41 +420,39 @@
   }
 
   /* ---------- Footer ---------- */
-  footer{background:var(--ink);color:rgba(248,245,238,0.75);padding:64px 0 28px;}
+  footer{background:var(--ink);color:rgba(247,249,252,0.75);padding:64px 0 28px;}
   .footer-top{
     display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;
     padding-bottom:44px;border-bottom:1px solid var(--line-light);
   }
   .footer-brand .masthead{color:var(--paper);font-size:1.4rem;}
-  .footer-brand p{color:rgba(248,245,238,0.6);font-size:0.9rem;margin-top:14px;max-width:32ch;}
-  .footer-col h4{font-size:0.78rem;color:var(--amber-soft);margin:0 0 16px;letter-spacing:0.02em;font-weight:600;}
-  .footer-col a, .footer-col div{display:block;font-size:0.9rem;color:rgba(248,245,238,0.75);text-decoration:none;margin-bottom:10px;}
+  .footer-brand p{color:rgba(247,249,252,0.6);font-size:0.9rem;margin-top:14px;max-width:32ch;}
+  .footer-col h4{font-size:0.78rem;color:var(--pale-red-soft);margin:0 0 16px;letter-spacing:0.02em;font-weight:600;}
+  .footer-col a, .footer-col div{display:block;font-size:0.9rem;color:rgba(247,249,252,0.75);text-decoration:none;margin-bottom:10px;}
   .footer-col a:hover{color:var(--paper);}
   .footer-bottom{
     display:flex;justify-content:space-between;align-items:center;
-    padding-top:24px;font-size:0.78rem;color:rgba(248,245,238,0.5);flex-wrap:wrap;gap:12px;
+    padding-top:24px;font-size:0.78rem;color:rgba(247,249,252,0.5);flex-wrap:wrap;gap:12px;
   }
   .social-row{display:flex;gap:16px;}
-  .social-row a{color:rgba(248,245,238,0.6);text-decoration:none;font-size:0.78rem;transition:color 0.2s ease;}
+  .social-row a{color:rgba(247,249,252,0.6);text-decoration:none;font-size:0.78rem;transition:color 0.2s ease;}
   .social-row a:hover{color:var(--paper);}
-  .dev-credit{color:rgba(248,245,238,0.75);text-decoration:none;transition:color 0.2s ease;}
+  .dev-credit{color:rgba(247,249,252,0.75);text-decoration:none;transition:color 0.2s ease;}
   .dev-credit:hover{color:var(--paper);text-decoration:underline;}
 
-  /* ---------- Responsive ---------- */
   @media (max-width:860px){
     .hero-grid{grid-template-columns:1fr;}
-    .hero-art{max-width:320px;margin:0 auto;}
-    .product-row{grid-template-columns:1fr;}
-    .why-grid, .how-steps{grid-template-columns:1fr;gap:32px;}
+    .hero-image-col{min-height:340px;border-radius:0;}
+    .services-grid, .how-grid, .why-grid{grid-template-columns:1fr;gap:24px;}
     .quote-panel{grid-template-columns:1fr;}
     .quote-intro{border-right:none;border-bottom:1px solid var(--line-light);}
     .footer-top{grid-template-columns:1fr 1fr;}
     nav.primary{display:none;}
+    .partners-inner{flex-direction:column;align-items:flex-start;}
+    .partner-logos{justify-content:flex-start;}
   }
   @media (max-width:600px){
     .wrap, .header-inner, .hero-inner{padding-left:20px;padding-right:20px;}
-    .masthead-row{flex-direction:column;align-items:flex-start;gap:12px;}
-    .edition-line{text-align:left;}
     .hero-copy h1{font-size:2.2rem;max-width:none;}
     .form-row{grid-template-columns:1fr;}
     .footer-top{grid-template-columns:1fr;}
@@ -320,12 +463,16 @@
 </head>
 <body>
 
+<div class="ira-bar">
+  Regulated by Insurance Regulatory Authority (IRA)
+</div>
+
 <header>
   <div class="header-inner">
-    <a class="brand" href="#top">
-      <svg class="brand-logo-svg" viewBox="0 0 260 180" fill="none">
-        <path d="M 12 115 C 40 50, 110 15, 220 15 C 235 15, 248 17, 260 20 C 180 32, 110 75, 75 118 C 50 118, 28 118, 12 115 Z" fill="#C81D25" />
-        <path d="M 75 118 C 110 75, 180 32, 260 20 C 230 40, 180 85, 120 135 C 75 172, 30 185, 0 180 C 25 170, 50 148, 75 118 Z" fill="#0D3B9C" />
+    <a class="brand" href="#top" aria-label="Morning Bird Insurance Home">
+      <svg class="brand-logo-svg" viewBox="0 0 340 140" fill="none" aria-hidden="true">
+        <path d="M 25 90 C 70 20, 180 5, 330 30 C 270 45, 160 55, 95 102 C 70 102, 45 100, 25 90 Z" fill="#8c4a53" />
+        <path d="M 95 102 C 160 55, 270 45, 330 30 C 290 60, 200 100, 110 135 C 75 145, 35 140, 0 130 C 30 120, 65 112, 95 102 Z" fill="#0f1c3f" />
       </svg>
       <div class="brand-text">
         <span class="brand-name">MORNING BIRD</span>
@@ -333,16 +480,16 @@
         <span class="brand-tagline">WE INSURE KENYA</span>
       </div>
     </a>
-    <nav class="primary">
-      <a href="#cover">Cover</a>
+    <nav class="primary" aria-label="Primary Navigation">
+      <a href="#cover">Services</a>
       <a href="#why">Why us</a>
       <a href="#how">How it works</a>
       <a href="blog.html">Blog</a>
       <a href="#quote">Get a quote</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="call-btn" href="tel:+254720498193">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.5 3h3l2 5-2.5 1.5a11 11 0 0 0 5.5 5.5L16 12.5l5 2v3c0 1.1-.9 2-2 2C10.6 19.5 4.5 13.4 4.5 5c0-1.1.9-2 2-2Z"/></svg>
+    <a class="call-btn" href="tel:+254720498193" aria-label="Call Morning Bird Insurance">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6.5 3h3l2 5-2.5 1.5a11 11 0 0 0 5.5 5.5L16 12.5l5 2v3c0 1.1-.9 2-2 2C10.6 19.5 4.5 13.4 4.5 5c0-1.1.9-2 2-2Z"/></svg>
       0720 498 193
     </a>
   </div>
@@ -350,122 +497,125 @@
 
 <main id="top">
 
-  <!-- HERO -->
-  <section class="hero" style="padding:0;">
+  <!-- HERO SECTION -->
+  <section class="hero" style="padding-top: 32px;">
     <div class="hero-inner">
-      <div class="masthead-row">
-        <div class="hero-brand-block">
-          <svg class="hero-logo-svg" viewBox="0 0 260 180" fill="none">
-            <path d="M 12 115 C 40 50, 110 15, 220 15 C 235 15, 248 17, 260 20 C 180 32, 110 75, 75 118 C 50 118, 28 118, 12 115 Z" fill="#E83A43" />
-            <path d="M 75 118 C 110 75, 180 32, 260 20 C 230 40, 180 85, 120 135 C 75 172, 30 185, 0 180 C 25 170, 50 148, 75 118 Z" fill="#3B7DFF" />
-          </svg>
-          <div class="hero-brand-titles">
-            <span class="hero-brand-title">MORNING BIRD</span>
-            <span class="hero-brand-sub">INSURANCE SERVICES</span>
-            <span class="hero-brand-tagline">WE INSURE KENYA</span>
-          </div>
-        </div>
-        <span class="edition-line">Bazaar Motors, Off Thika Super Highway, Next to Zetech University<br>Regulated Intermediary by the Insurance Regulatory Authority</span>
-      </div>
       <div class="hero-rule"></div>
 
       <div class="hero-grid">
-        <div class="hero-copy">
-          <h1>Cover that rises before the day catches you out.</h1>
-          <p>Motor, medical, pension, fire, marine, and commercial cover from Kenya's leading underwriters — arranged by an independent intermediary who answers the phone.</p>
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="#quote">Get a quote</a>
-            <a class="btn btn-ghost" href="tel:+254720498193">Call 0720 498 193</a>
-          </div>
-          <div class="hero-trust">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>
-            IRA-regulated intermediary · no cost to switch or claim
+        <div class="hero-content-col">
+          <div class="hero-copy">
+            <h1>Cover that rises before the day catches you out.</h1>
+            <p>Motor, medical, pension, fire, marine, and commercial cover from Kenya's leading underwriters — arranged by an independent intermediary who answers the phone.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary" href="#quote">Get a quote</a>
+              <a class="btn btn-ghost" href="tel:+254720498193">Call 0720 498 193</a>
+            </div>
+            <div class="hero-trust">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>
+              IRA-regulated intermediary · no cost to switch or claim
+            </div>
           </div>
         </div>
 
-        <div class="hero-art">
-          <svg viewBox="0 0 400 410" width="100%" height="100%">
-            <defs>
-              <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#1c2f57"/>
-                <stop offset="55%" stop-color="#5c3c58"/>
-                <stop offset="100%" stop-color="#dc9c3f"/>
-              </linearGradient>
-            </defs>
-            <rect x="0" y="0" width="400" height="410" fill="url(#skyGrad)"/>
-            <circle cx="200" cy="270" r="86" fill="#f1c37c" opacity="0.9"/>
-            <path d="M0 320c40-14 80-18 120-10s70 22 110 20 90-24 170-6v86H0Z" fill="#122142" opacity="0.55"/>
-            <path d="M0 350c50-10 100-8 150 2s90 16 130 6 70-20 120-14v66H0Z" fill="#122142" opacity="0.85"/>
-            <g transform="translate(100,100) scale(0.9)">
-              <path d="M 12 115 C 40 50, 110 15, 220 15 C 235 15, 248 17, 260 20 C 180 32, 110 75, 75 118 C 50 118, 28 118, 12 115 Z" fill="#f8f5ee"/>
-              <path d="M 75 118 C 110 75, 180 32, 260 20 C 230 40, 180 85, 120 135 C 75 172, 30 185, 0 180 C 25 170, 50 148, 75 118 Z" fill="#f1c37c"/>
-            </g>
-          </svg>
-          <div class="hero-art-caption">
-            <span>Ruiru, off Thika Highway</span>
-            <span>Est. cover in 24 hrs</span>
+        <!-- Slider Column -->
+        <div class="hero-image-col">
+          <div class="hero-slide active">
+            <img src="images/image1.png" alt="Morning Bird Insurance Agency Services Kenya" width="600" height="480">
+          </div>
+          <div class="hero-slide">
+            <img src="images/image13.jpeg" alt="Morning Bird Insurance Client Support Nairobi" width="600" height="480" loading="lazy">
+          </div>
+          <div class="hero-slide">
+            <img src="images/image3.jpeg" alt="Motor Vehicle Insurance Solutions Kenya" width="600" height="480" loading="lazy">
+          </div>
+          <div class="hero-slide">
+            <img src="images/image4.jpeg" alt="Comprehensive Medical Cover Packages" width="600" height="480" loading="lazy">
+          </div>
+          <div class="hero-slider-dots">
+            <span class="hero-dot active" onclick="currentSlide(0)"></span>
+            <span class="hero-dot" onclick="currentSlide(1)"></span>
+            <span class="hero-dot" onclick="currentSlide(2)"></span>
+            <span class="hero-dot" onclick="currentSlide(3)"></span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRODUCTS -->
+  <!-- PRODUCTS & SERVICES -->
   <section class="products" id="cover">
     <div class="wrap">
       <div class="section-head">
-        <div class="kicker">What we cover</div>
+        <div class="kicker">Our Services &amp; Cover Options</div>
         <h2>Comprehensive insurance solutions, tailor-made for you.</h2>
-        <p>We place your risk with the underwriter best suited to it, then manage the policy and any claim on your behalf.</p>
+        <p>We place your risk with the underwriter best suited to it, managing policies and claims directly on your behalf.</p>
       </div>
 
-      <div class="product-index">
-        <div class="product-row">
-          <div class="product-item">
-            <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 13l1.5-5A2 2 0 0 1 6.4 6.5h11.2A2 2 0 0 1 19.5 8L21 13"/><rect x="2.5" y="13" width="19" height="6" rx="1.5"/><circle cx="7" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></svg>
-            <div>
-              <h3>Motor Insurance</h3>
-              <p>Third-party or comprehensive cover for private, commercial, and PSV vehicles with trusted repair networks.</p>
-            </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-img-container">
+            <img src="images/image3.jpeg" alt="Motor Insurance Services in Kenya" width="400" height="180" loading="lazy">
           </div>
-          <div class="product-item">
-            <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-4.6-9.5-9C1 8.5 2.5 5 6 5c2 0 3.3 1 4 2.2C10.7 6 12 5 14 5c3.5 0 5 3.5 3.5 7-2.5 4.4-9.5 9-9.5 9Z"/></svg>
-            <div>
-              <h3>Medical Cover</h3>
-              <p>Inpatient, outpatient, and maternity plans tailored for individuals, families, and corporate groups nationwide.</p>
-            </div>
+          <div class="service-content">
+            <h3>Motor Insurance</h3>
+            <p>Third-party or comprehensive cover for private, commercial, and PSV vehicles with trusted repair networks.</p>
+            <a href="#quote" class="service-link">Get Motor Quote &rarr;</a>
           </div>
         </div>
-        <div class="product-row">
-          <div class="product-item">
-            <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M4 8h16a4 4 0 0 1-8 4 4 4 0 0 1-8-4Zm0 8h16a4 4 0 0 1-8 4 4 4 0 0 1-8-4Z"/></svg>
-            <div>
-              <h3>Pension &amp; Life Schemes</h3>
-              <p>Individual and group retirement schemes, endowment plans, and life cover securing your financial future.</p>
-            </div>
+
+        <div class="service-card">
+          <div class="service-img-container">
+            <img src="images/image4.jpeg" alt="Medical Cover and Health Insurance Kenya" width="400" height="180" loading="lazy">
           </div>
-          <div class="product-item">
-            <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
-            <div>
-              <h3>Fire &amp; Domestic Package</h3>
-              <p>Complete property protection, residential building, contents, and commercial fire and perils coverage.</p>
-            </div>
+          <div class="service-content">
+            <h3>Medical Cover</h3>
+            <p>Inpatient, outpatient, and maternity plans tailored for individuals, families, and corporate groups nationwide.</p>
+            <a href="#quote" class="service-link">Get Medical Quote &rarr;</a>
           </div>
         </div>
-        <div class="product-row">
-          <div class="product-item">
-            <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 12h19M12 2.5c2.5 2.7 4 6 4 9.5s-1.5 6.8-4 9.5c-2.5-2.7-4-6-4-9.5s1.5-6.8 4-9.5Z"/></svg>
-            <div>
-              <h3>Marine &amp; Cargo Insurance</h3>
-              <p>Protection for goods in transit locally and internationally across sea, air, and overland routes.</p>
-            </div>
+
+        <div class="service-card">
+          <div class="service-img-container">
+            <img src="images/image5.jpeg" alt="Pension and Life Insurance Schemes" width="400" height="180" loading="lazy">
           </div>
-          <div class="product-item">
-            <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11Z"/><path d="M9 12l2 2 4-4"/></svg>
-            <div>
-              <h3>Specialty &amp; Commercial Cover</h3>
-              <p>Work Injury Benefits (WIBA), Contractors All Risks (CAR), and specialized options including Pet Insurance.</p>
-            </div>
+          <div class="service-content">
+            <h3>Pension &amp; Life Schemes</h3>
+            <p>Individual and group retirement schemes, endowment plans, and life cover securing your financial future.</p>
+            <a href="#quote" class="service-link">Explore Schemes &rarr;</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img-container">
+            <img src="images/image6.jpeg" alt="Fire and Domestic Package Insurance" width="400" height="180" loading="lazy">
+          </div>
+          <div class="service-content">
+            <h3>Fire &amp; Domestic Package</h3>
+            <p>Complete property protection, residential building, contents, and commercial fire and perils coverage.</p>
+            <a href="#quote" class="service-link">Protect Property &rarr;</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img-container">
+            <img src="images/image7.jpeg" alt="Marine and Cargo Insurance Kenya" width="400" height="180" loading="lazy">
+          </div>
+          <div class="service-content">
+            <h3>Marine &amp; Cargo Insurance</h3>
+            <p>Protection for goods in transit locally and internationally across sea, air, and overland routes.</p>
+            <a href="#quote" class="service-link">Secure Cargo &rarr;</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img-container">
+            <img src="images/image8.jpeg" alt="Specialty Commercial Cover WIBA CAR" width="400" height="180" loading="lazy">
+          </div>
+          <div class="service-content">
+            <h3>Specialty Cover (WIBA &amp; CAR)</h3>
+            <p>Work Injury Benefits (WIBA), Contractors All Risks (CAR), and specialized business solutions.</p>
+            <a href="#quote" class="service-link">View Commercial &rarr;</a>
           </div>
         </div>
       </div>
@@ -503,24 +653,35 @@
   <section class="how" id="how">
     <div class="wrap">
       <div class="section-head">
-        <div class="kicker">Getting covered</div>
-        <h2>Three steps, most of it by phone or email.</h2>
+        <div class="kicker">Client Engagement &amp; Activities</div>
+        <h2>How we deliver your coverage in three seamless steps.</h2>
       </div>
-      <div class="how-steps">
-        <div class="how-step">
-          <div class="how-num">1</div>
-          <h3>Tell us what you need</h3>
-          <p>Fill in the form below or call us. We'll ask a few questions about the vehicle, property, trip or person to be covered.</p>
+      <div class="how-grid">
+        <div class="how-card">
+          <img src="images/image9.jpeg" alt="Insurance Consultation Step 1" width="400" height="160" loading="lazy">
+          <div class="how-card-body">
+            <div class="how-num">1</div>
+            <h3>Tell us what you need</h3>
+            <p>Fill in the form or call us. We'll ask a few questions about the vehicle, property, or person to be covered.</p>
+          </div>
         </div>
-        <div class="how-step">
-          <div class="how-num">2</div>
-          <h3>Compare quotes</h3>
-          <p>We come back with quotes from suitable underwriters, usually within a working day, and talk you through the differences.</p>
+
+        <div class="how-card">
+          <img src="images/image10.jpeg" alt="Underwriter Comparison Step 2" width="400" height="160" loading="lazy">
+          <div class="how-card-body">
+            <div class="how-num">2</div>
+            <h3>Compare quotes</h3>
+            <p>We come back with tailored options from suitable underwriters, usually within a working day.</p>
+          </div>
         </div>
-        <div class="how-step">
-          <div class="how-num">3</div>
-          <h3>Get your documents</h3>
-          <p>Once you accept and pay, we issue your policy documents by email — ready for your records, your bank or your visa application.</p>
+
+        <div class="how-card">
+          <img src="images/image11.jpeg" alt="Policy Issuance Step 3" width="400" height="160" loading="lazy">
+          <div class="how-card-body">
+            <div class="how-num">3</div>
+            <h3>Get your documents</h3>
+            <p>Once you accept and pay, we issue your policy documents promptly by email or physical drop-off.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -536,26 +697,45 @@
         </div>
         <a class="journal-all" href="blog.html">Read all posts &rarr;</a>
       </div>
-      <div class="journal-grid" id="journal-grid"><!-- injected by script --></div>
+      <div class="journal-grid" id="journal-grid"></div>
     </div>
   </section>
 
-  <!-- PARTNERS -->
+  <!-- PARTNERS / UNDERWRITERS (LOGO BADGES) -->
   <section class="partners">
     <div class="wrap partners-inner">
-      <span class="partners-label">Underwritten through leading insurers, including</span>
-      <div class="partner-names">
-        <span>Britam</span><span>Jubilee</span><span>UAP Old Mutual</span><span>APA</span><span>AAR</span>
+      <span class="partners-label">Trusted policies underwritten through leading licensed insurers in Kenya</span>
+      <div class="partner-logos">
+        <div class="partner-badge" title="Britam Insurance Kenya">
+          <span class="partner-dot"></span>
+          <span>Britam</span>
+        </div>
+        <div class="partner-badge" title="Jubilee Insurance Kenya">
+          <span class="partner-dot"></span>
+          <span>Jubilee</span>
+        </div>
+        <div class="partner-badge" title="UAP Old Mutual Kenya">
+          <span class="partner-dot"></span>
+          <span>UAP Old Mutual</span>
+        </div>
+        <div class="partner-badge" title="APA Insurance Kenya">
+          <span class="partner-dot"></span>
+          <span>APA</span>
+        </div>
+        <div class="partner-badge" title="AAR Insurance Kenya">
+          <span class="partner-dot"></span>
+          <span>AAR</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- QUOTE FORM (Configured to deliver directly to info@morningbirdinsurance.co.ke via Formspree) -->
+  <!-- SEM LEAD GENERATION FORM -->
   <section class="quote" id="quote">
     <div class="wrap">
       <div class="quote-panel">
         <div class="quote-intro">
-          <h2>Request a quote</h2>
+          <h2>Request a Fast Quote</h2>
           <p>Give us a few details and the type of cover you're after. Submissions go straight to our team at info@morningbirdinsurance.co.ke.</p>
           <div class="quote-contact">
             <div>📞 0720 498 193</div>
@@ -564,16 +744,21 @@
           </div>
         </div>
         
-        <!-- Replace YOUR_FORMSPREE_ENDPOINT_ID with your actual form ID from formspree.io -->
+        <!-- Form configured with SEM attribution fields -->
         <form class="quote-form" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT_ID" method="POST">
+          <!-- Hidden SEM UTM tracking fields for Google/Facebook Ads tracking -->
+          <input type="hidden" name="utm_source" id="utm_source" value="">
+          <input type="hidden" name="utm_medium" id="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" id="utm_campaign" value="">
+
           <div class="form-row">
             <div>
               <label for="name">Full name</label>
-              <input id="name" name="name" type="text" placeholder="Jane Wanjiru" required>
+              <input id="name" name="name" type="text" placeholder="Jane Wanjiru" required autocomplete="name">
             </div>
             <div>
               <label for="phone">Phone number</label>
-              <input id="phone" name="phone" type="tel" placeholder="07XX XXX XXX" required>
+              <input id="phone" name="phone" type="tel" placeholder="07XX XXX XXX" required autocomplete="tel">
             </div>
           </div>
           <div class="form-row">
@@ -587,12 +772,12 @@
                 <option>Marine &amp; Cargo Insurance</option>
                 <option>Work Injury Benefits (WIBA)</option>
                 <option>Contractors All Risks (CAR)</option>
-                <option>Pet Insurance</option>
+                <option>Specialty Cover</option>
               </select>
             </div>
             <div>
               <label for="email">Email address</label>
-              <input id="email" name="email" type="email" placeholder="you@email.com" required>
+              <input id="email" name="email" type="email" placeholder="you@email.com" required autocomplete="email">
             </div>
           </div>
           <div>
@@ -608,14 +793,14 @@
 
 </main>
 
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/254720498193?text=Hello%20Morning%20Bird%20Insurance%2C%20I%20would%20like%20to%20make%20an%20inquiry." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 32 32">
+<!-- Floating WhatsApp Conversion Button -->
+<a href="https://wa.me/254720498193?text=Hello%20Morning%20Bird%20Insurance%2C%20I%20would%20like%20to%20make%20an%20inquiry." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Morning Bird on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true">
     <path d="M16 2a14 14 0 0 0-12 21.24L2 30l6.92-1.82A14 14 0 1 0 16 2zm0 25.5a11.4 11.4 0 0 1-5.83-1.6l-.42-.25-4.34 1.14 1.16-4.23-.28-.44A11.5 11.5 0 1 1 16 27.5zm6.3-8.54c-.35-.17-2.05-1.01-2.37-1.13s-.55-.17-.78.17-.9 1.13-1.1 1.36-.4.26-.75.09a9.5 9.5 0 0 1-2.79-1.72 10.5 10.5 0 0 1-1.93-2.4c-.2-.35 0-.54.17-.71s.35-.4.52-.61a2.3 2.3 0 0 0 .35-.58.64.64 0 0 0 0-.61c-.09-.17-.78-1.88-1.07-2.58s-.58-.58-.78-.59h-.67a1.3 1.3 0 0 0-.94.44A3.9 3.9 0 0 0 7.8 11.2a6.8 6.8 0 0 0 1.42 3.63 15.6 15.6 0 0 0 6 5.28c2.51 1.09 3 1.16 4.12 1a3.5 3.5 0 0 0 2.31-1.63 2.8 2.8 0 0 0 .2-1.63c-.09-.15-.35-.24-.7-.41z"/>
   </svg>
 </a>
 
-<footer id="contact">
+<footer>
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
@@ -623,7 +808,7 @@
         <p>An independent insurance intermediary located at Bazaar Motors, off Thika Super Highway, next to Zetech University, providing comprehensive insurance solutions across Kenya.</p>
       </div>
       <div class="footer-col">
-        <h4>Cover</h4>
+        <h4>Services</h4>
         <a href="#cover">Motor Insurance</a>
         <a href="#cover">Medical Cover</a>
         <a href="#cover">Pension &amp; Life</a>
@@ -650,24 +835,73 @@
         <a href="https://www.facebook.com/p/Morning-Bird-Insurance-Services-100034989714204/" target="_blank" rel="noopener noreferrer">Facebook</a>
         <a href="https://ke.linkedin.com/in/lawrence-kamau-8261991b6" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://wa.me/254720498193?text=Hello%20Morning%20Bird%20Insurance%2C%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" rel="noopener noreferrer">WhatsApp</a>
-      </div>
     </div>
   </div>
 </footer>
 
 <script src="posts-data.js"></script>
 <script>
+  /* ---------- SEM Tracking: Capture UTM parameters from Google/Facebook Ads ---------- */
+  window.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    ['utm_source', 'utm_medium', 'utm_campaign'].forEach(param => {
+      if (urlParams.has(param)) {
+        const field = document.getElementById(param);
+        if (field) field.value = urlParams.get(param);
+      }
+    });
+  });
+
+  /* ---------- Hero Automatic Image Slider Script ---------- */
+  let currentSlideIndex = 0;
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+      if(dots[i]) dots[i].classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+    showSlide(currentSlideIndex);
+  }
+
+  function currentSlide(index) {
+    currentSlideIndex = index;
+    showSlide(currentSlideIndex);
+  }
+
+  let slideInterval = setInterval(nextSlide, 3000);
+
+  const heroImageCol = document.querySelector('.hero-image-col');
+  if (heroImageCol) {
+    heroImageCol.addEventListener('mouseenter', () => clearInterval(slideInterval));
+    heroImageCol.addEventListener('mouseleave', () => {
+      slideInterval = setInterval(nextSlide, 3000);
+    });
+  }
+
+  /* ---------- Journal Loader ---------- */
   function formatDate(iso){
     const d = new Date(iso + "T00:00:00");
     return d.toLocaleDateString("en-KE", { day:"numeric", month:"long", year:"numeric" });
   }
   if (typeof POSTS !== 'undefined') {
-    const latest = POSTS.slice(0, 3);
-    document.getElementById("journal-grid").innerHTML = latest.map(p => `
+    const thePosts = POSTS || [];
+    const latest = thePosts.slice(0, 3);
+    document.getElementById("journal-grid").innerHTML = latest.map((p, idx) => `
       <a class="journal-card" href="blog.html#${p.slug}">
-        <div class="post-meta">${p.category}<span class="dot">&middot;</span>${formatDate(p.date)}</div>
-        <h3>${p.title}</h3>
-        <p>${p.excerpt}</p>
+        <div class="journal-img-wrap">
+          <img src="${p.image || 'images/image12.jpeg'}" alt="${p.title}" width="400" height="225" loading="lazy">
+        </div>
+        <div class="journal-content">
+          <div class="post-meta">${p.category}<span class="dot">&middot;</span>${formatDate(p.date)}</div>
+          <h3>${p.title}</h3>
+          <p>${p.excerpt}</p>
+        </div>
       </a>
     `).join("");
   }
