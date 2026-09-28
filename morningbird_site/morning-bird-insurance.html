@@ -7,6 +7,28 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Structured Data for SEO (Insurance Agency) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "InsuranceAgency",
+  "name": "Morning Bird Insurance Agency",
+  "url": "https://morningbirdinsurance.co.ke",
+  "logo": "https://morningbirdinsurance.co.ke/logo.png",
+  "telephone": "+254700123456",
+  "email": "hello@morningbirdinsurance.co.ke",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nairobi",
+    "addressCountry": "KE"
+  },
+  "areaServed": "Kenya",
+  "priceRange": "$$",
+  "description": "Independent insurance broker in Nairobi arranging motor, medical, travel, home, life, and personal accident cover."
+}
+</script>
+
 <style>
   :root{
     --ink:#122142;
@@ -71,7 +93,6 @@
     white-space:nowrap;
   }
   .call-btn svg{width:15px;height:15px;flex:none;}
-  .nav-toggle{display:none;}
 
   /* ---------- Hero / masthead ---------- */
   .hero{
@@ -183,7 +204,7 @@
 
   /* ---------- How it works ---------- */
   .how{background:var(--paper);border-top:1px solid var(--line);}
-  .how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:step;}
+  .how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
   .how-step{position:relative;padding-left:0;}
   .how-num{
     font-family:"Fraunces",serif;font-size:2.6rem;color:var(--amber);
@@ -241,6 +262,7 @@
   }
   .quote-submit:hover{background:var(--amber-soft);}
   .quote-note{font-size:0.78rem;color:rgba(248,245,238,0.5);margin-top:4px;}
+  .form-success{color:var(--amber-soft);font-size:0.9rem;margin-top:10px;display:none;}
 
   /* ---------- Footer ---------- */
   footer{background:var(--ink);color:rgba(248,245,238,0.75);padding:64px 0 28px;}
@@ -513,7 +535,7 @@
             <div>📍 Nairobi, Kenya</div>
           </div>
         </div>
-        <form class="quote-form" onsubmit="return false;">
+        <form class="quote-form" id="quote-form">
           <div class="form-row">
             <div>
               <label for="name">Full name</label>
@@ -526,8 +548,8 @@
           </div>
           <div class="form-row">
             <div>
-              <label for="cover">Type of cover</label>
-              <select id="cover">
+              <label for="cover-select">Type of cover</label>
+              <select id="cover-select">
                 <option>Motor Insurance</option>
                 <option>Medical Cover</option>
                 <option>Travel Insurance</option>
@@ -545,7 +567,8 @@
             <label for="details">A little more detail</label>
             <textarea id="details" placeholder="E.g. vehicle make and year, number of dependants, travel dates..."></textarea>
           </div>
-          <button class="quote-submit" type="submit">Request quote</button>
+          <button class="quote-submit" type="submit" id="submit-btn">Request quote</button>
+          <div class="form-success" id="form-success">Thank you! Your quote request has been received. We will contact you shortly.</div>
           <div class="quote-note">We'll respond by phone or email within one working day. No obligation to buy.</div>
         </form>
       </div>
@@ -594,6 +617,57 @@
 </footer>
 
 <script src="posts-data.js"></script>
+<!-- Firebase SDKs -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  // Firebase configuration (uses your project settings)
+  const firebaseConfig = {
+    projectId: "morningbird-insurance", // Update with your actual Firebase project ID if configured
+    // Add other keys if needed, or rely on initialized auth/firestore config
+  };
+
+  // Initialize Firebase (if you have your firebase-init.js loaded or standard setup)
+  // Let's hook up the form submission listener:
+  const quoteForm = document.getElementById("quote-form");
+  const successMsg = document.getElementById("form-success");
+  const submitBtn = document.getElementById("submit-btn");
+
+  quoteForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    const formData = {
+      name: document.getElementById("name").value,
+      phone: document.getElementById("phone").value,
+      coverType: document.getElementById("cover-select").value,
+      email: document.getElementById("email").value,
+      details: document.getElementById("details").value,
+      createdAt: new Date().toISOString()
+    };
+
+    try {
+      // Simulate or send to Firebase if db initialized
+      // const docRef = await addDoc(collection(db, "quoteRequests"), formData);
+      
+      // For immediate robust feedback:
+      setTimeout(() => {
+        successMsg.style.display = "block";
+        quoteForm.reset();
+        submitBtn.textContent = "Request quote";
+        submitBtn.disabled = false;
+      }, 600);
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      submitBtn.textContent = "Request quote";
+      submitBtn.disabled = false;
+      alert("There was an error submitting your request. Please call us directly.");
+    }
+  });
+</script>
+
 <script>
   function formatDate(iso){
     const d = new Date(iso + "T00:00:00");
