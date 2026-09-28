@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://morningbirdinsurance.co.ke/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Blog / Journal Page -->
+  <url>
+    <loc>https://morningbirdinsurance.co.ke/blog.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Admin / Internal (Optional: usually excluded from public sitemaps if private) -->
+  <!-- 
+  <url>
+    <loc>https://morningbirdinsurance.co.ke/admin.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url> 
+  -->
+</urlset>
