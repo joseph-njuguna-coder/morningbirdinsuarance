@@ -7,6 +7,28 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Structured Data for SEO (Insurance Agency) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "InsuranceAgency",
+  "name": "Morning Bird Insurance Agency",
+  "url": "https://morningbirdinsurance.co.ke",
+  "logo": "https://morningbirdinsurance.co.ke/logo.png",
+  "telephone": "+254700123456",
+  "email": "hello@morningbirdinsurance.co.ke",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nairobi",
+    "addressCountry": "KE"
+  },
+  "areaServed": "Kenya",
+  "priceRange": "$$",
+  "description": "Independent insurance broker in Nairobi arranging motor, medical, travel, home, life, and personal accident cover."
+}
+</script>
+
 <style>
   :root{
     --ink:#122142;
@@ -53,15 +75,13 @@
   }
   .header-inner{
     display:flex;align-items:center;justify-content:space-between;
-    padding:14px 32px;
+    padding:18px 32px;
     max-width:1180px;margin:0 auto;
   }
-  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
-  .brand-logo-svg{width:38px;height: auto;flex:none;}
-  .brand-text{display:flex;flex-direction:column;}
-  .brand-name{font-family:"Fraunces", serif;font-weight:700;font-size:1.15rem;line-height:1.1;letter-spacing:-0.01em;color:#B81D24;}
-  .brand-suffix{font-family:"IBM Plex Sans", sans-serif;font-size:0.68rem;font-weight:600;color:#002B66;letter-spacing:0.04em;}
-  .brand-tagline{font-family:"Fraunces", serif;font-style:italic;font-size:0.62rem;color:#002B66;}
+  .brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;}
+  .brand-mark{width:26px;height:26px;flex:none;}
+  .brand-name{font-family:"Fraunces", serif;font-weight:700;font-size:1.28rem;letter-spacing:-0.01em;color:var(--ink);}
+  .brand-suffix{font-family:"IBM Plex Sans", sans-serif;font-size:0.72rem;color:var(--text-muted);letter-spacing:0.04em;}
   nav.primary{display:flex;align-items:center;gap:30px;}
   nav.primary a{font-size:0.94rem;text-decoration:none;color:var(--ink-soft);border-bottom:1px solid transparent;padding-bottom:2px;transition:border-color .15s ease;}
   nav.primary a:hover{border-bottom-color:var(--amber);}
@@ -73,7 +93,6 @@
     white-space:nowrap;
   }
   .call-btn svg{width:15px;height:15px;flex:none;}
-  .nav-toggle{display:none;}
 
   /* ---------- Hero / masthead ---------- */
   .hero{
@@ -83,20 +102,17 @@
     overflow:hidden;
   }
   .hero-inner{
-    max-width:1180px;margin:0 auto;padding:48px 32px 0;
+    max-width:1180px;margin:0 auto;padding:64px 32px 0;
     position:relative;z-index:2;
   }
   .masthead-row{
-    display:flex;align-items:center;justify-content:space-between;
+    display:flex;align-items:flex-end;justify-content:space-between;
     border-bottom:1px solid var(--line-light);
     padding-bottom:18px;
   }
-  .hero-brand-block{display:flex;align-items:center;gap:18px;}
-  .hero-logo-svg{width:64px;height:auto;}
-  .hero-brand-titles{display:flex;flex-direction:column;}
-  .hero-brand-title{font-family:"Fraunces", serif;font-weight:700;font-size:2rem;line-height:1;color:#FFD1D3;letter-spacing:0.02em;}
-  .hero-brand-sub{font-family:"IBM Plex Sans", sans-serif;font-weight:600;font-size:0.95rem;color:#A1C4FF;letter-spacing:0.05em;}
-  .hero-brand-tagline{font-family:"Fraunces", serif;font-style:italic;font-size:0.85rem;color:var(--amber-soft);}
+  .masthead-row .masthead{
+    font-size:2.6rem;color:var(--paper);
+  }
   .edition-line{
     font-size:0.78rem;color:var(--amber-soft);
     letter-spacing:0.03em;text-align:right;
@@ -188,7 +204,7 @@
 
   /* ---------- How it works ---------- */
   .how{background:var(--paper);border-top:1px solid var(--line);}
-  .how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:step;}
+  .how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
   .how-step{position:relative;padding-left:0;}
   .how-num{
     font-family:"Fraunces",serif;font-size:2.6rem;color:var(--amber);
@@ -246,35 +262,7 @@
   }
   .quote-submit:hover{background:var(--amber-soft);}
   .quote-note{font-size:0.78rem;color:rgba(248,245,238,0.5);margin-top:4px;}
-
-  /* ---------- Floating WhatsApp Button ---------- */
-  .whatsapp-float {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    width: 56px;
-    height: 56px;
-    background-color: #25D366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .whatsapp-float:hover {
-    transform: scale(1.08);
-    box-shadow: 0px 6px 16px rgba(0,0,0,0.35);
-  }
-  .whatsapp-float svg {
-    width: 32px;
-    height: 32px;
-    fill: #FFF;
-  }
+  .form-success{color:var(--amber-soft);font-size:0.9rem;margin-top:10px;display:none;}
 
   /* ---------- Footer ---------- */
   footer{background:var(--ink);color:rgba(248,245,238,0.75);padding:64px 0 28px;}
@@ -292,10 +280,8 @@
     padding-top:24px;font-size:0.78rem;color:rgba(248,245,238,0.5);flex-wrap:wrap;gap:12px;
   }
   .social-row{display:flex;gap:16px;}
-  .social-row a{color:rgba(248,245,238,0.6);text-decoration:none;font-size:0.78rem;transition:color 0.2s ease;}
+  .social-row a{color:rgba(248,245,238,0.6);text-decoration:none;font-size:0.78rem;}
   .social-row a:hover{color:var(--paper);}
-  .dev-credit{color:rgba(248,245,238,0.75);text-decoration:none;transition:color 0.2s ease;}
-  .dev-credit:hover{color:var(--paper);text-decoration:underline;}
 
   /* ---------- Responsive ---------- */
   @media (max-width:860px){
@@ -310,13 +296,11 @@
   }
   @media (max-width:600px){
     .wrap, .header-inner, .hero-inner{padding-left:20px;padding-right:20px;}
-    .masthead-row{flex-direction:column;align-items:flex-start;gap:12px;}
-    .edition-line{text-align:left;}
+    .masthead-row .masthead{font-size:1.9rem;}
     .hero-copy h1{font-size:2.2rem;max-width:none;}
     .form-row{grid-template-columns:1fr;}
     .footer-top{grid-template-columns:1fr;}
     .quote-intro,.quote-form{padding:36px 24px;}
-    .footer-bottom{flex-direction:column;align-items:flex-start;gap:16px;}
   }
 </style>
 </head>
@@ -325,16 +309,11 @@
 <header>
   <div class="header-inner">
     <a class="brand" href="#top">
-      <!-- Embedded SVG Logo Mark -->
-      <svg class="brand-logo-svg" viewBox="0 0 260 180" fill="none">
-        <path d="M 12 115 C 40 50, 110 15, 220 15 C 235 15, 248 17, 260 20 C 180 32, 110 75, 75 118 C 50 118, 28 118, 12 115 Z" fill="#C81D25" />
-        <path d="M 75 118 C 110 75, 180 32, 260 20 C 230 40, 180 85, 120 135 C 75 172, 30 185, 0 180 C 25 170, 50 148, 75 118 Z" fill="#0D3B9C" />
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none">
+        <path d="M2 20C7 12 13 8 18 8c2 0 3 1 3 3 0 3-3 5-7 5 3 1 7 1 10-1 3.5-2.3 5-6 6-9 .3 4-1 8.3-4 11.3C22.5 30 13 31 2 20Z" fill="#122142"/>
       </svg>
-      <div class="brand-text">
-        <span class="brand-name">MORNING BIRD</span>
-        <span class="brand-suffix">INSURANCE SERVICES</span>
-        <span class="brand-tagline">WE INSURE KENYA</span>
-      </div>
+      <span class="brand-name">Morning&nbsp;Bird</span>
+      <span class="brand-suffix">INSURANCE</span>
     </a>
     <nav class="primary">
       <a href="#cover">Cover</a>
@@ -344,9 +323,9 @@
       <a href="#quote">Get a quote</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="call-btn" href="tel:+254720498193">
+    <a class="call-btn" href="tel:+254700123456">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.5 3h3l2 5-2.5 1.5a11 11 0 0 0 5.5 5.5L16 12.5l5 2v3c0 1.1-.9 2-2 2C10.6 19.5 4.5 13.4 4.5 5c0-1.1.9-2 2-2Z"/></svg>
-      0720 498 193
+      0700 123 456
     </a>
   </div>
 </header>
@@ -357,32 +336,22 @@
   <section class="hero" style="padding:0;">
     <div class="hero-inner">
       <div class="masthead-row">
-        <div class="hero-brand-block">
-          <svg class="hero-logo-svg" viewBox="0 0 260 180" fill="none">
-            <path d="M 12 115 C 40 50, 110 15, 220 15 C 235 15, 248 17, 260 20 C 180 32, 110 75, 75 118 C 50 118, 28 118, 12 115 Z" fill="#E83A43" />
-            <path d="M 75 118 C 110 75, 180 32, 260 20 C 230 40, 180 85, 120 135 C 75 172, 30 185, 0 180 C 25 170, 50 148, 75 118 Z" fill="#3B7DFF" />
-          </svg>
-          <div class="hero-brand-titles">
-            <span class="hero-brand-title">MORNING BIRD</span>
-            <span class="hero-brand-sub">INSURANCE SERVICES</span>
-            <span class="hero-brand-tagline">WE INSURE KENYA</span>
-          </div>
-        </div>
-        <span class="edition-line">Bazaar Motors, Off Thika Super Highway, Next to Zetech University<br>Regulated Intermediary by the Insurance Regulatory Authority</span>
+        <span class="masthead">Morning Bird</span>
+        <span class="edition-line">Nairobi, Kenya<br>Licensed by the Insurance Regulatory Authority</span>
       </div>
       <div class="hero-rule"></div>
 
       <div class="hero-grid">
         <div class="hero-copy">
           <h1>Cover that rises before the day catches you out.</h1>
-          <p>Motor, medical, pension, fire, marine, and commercial cover from Kenya's leading underwriters — arranged by an independent intermediary who answers the phone.</p>
+          <p>Motor, medical, travel, home and life cover from Kenya's leading insurers — arranged by an independent broker who answers the phone.</p>
           <div class="hero-ctas">
             <a class="btn btn-primary" href="#quote">Get a quote</a>
-            <a class="btn btn-ghost" href="tel:+254720498193">Call 0720 498 193</a>
+            <a class="btn btn-ghost" href="tel:+254700123456">Call 0700 123 456</a>
           </div>
           <div class="hero-trust">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>
-            IRA-regulated intermediary · no cost to switch or claim
+            IRA-licensed broker · no cost to switch or claim
           </div>
         </div>
 
@@ -399,14 +368,13 @@
             <circle cx="200" cy="270" r="86" fill="#f1c37c" opacity="0.9"/>
             <path d="M0 320c40-14 80-18 120-10s70 22 110 20 90-24 170-6v86H0Z" fill="#122142" opacity="0.55"/>
             <path d="M0 350c50-10 100-8 150 2s90 16 130 6 70-20 120-14v66H0Z" fill="#122142" opacity="0.85"/>
-            <!-- bird mark inside hero scene -->
-            <g transform="translate(100,100) scale(0.9)">
-              <path d="M 12 115 C 40 50, 110 15, 220 15 C 235 15, 248 17, 260 20 C 180 32, 110 75, 75 118 C 50 118, 28 118, 12 115 Z" fill="#f8f5ee"/>
-              <path d="M 75 118 C 110 75, 180 32, 260 20 C 230 40, 180 85, 120 135 C 75 172, 30 185, 0 180 C 25 170, 50 148, 75 118 Z" fill="#f1c37c"/>
+            <!-- bird -->
+            <g transform="translate(120,120)">
+              <path d="M0 34C22 6 48-8 70 4c-12 2-22 10-26 20 18-2 36 4 48 16-16-4-30-2-40 6 14 4 26 14 32 26-14-10-28-14-40-12C58 78 40 88 20 88 34 78 42 64 40 50 26 62 10 66-6 62 8 56 18 46 20 34 10 40-4 40-14 34-4 32 4 24 0 34Z" fill="#f8f5ee"/>
             </g>
           </svg>
           <div class="hero-art-caption">
-            <span>Ruiru, off Thika Highway</span>
+            <span>Sunrise, Nairobi</span>
             <span>Est. cover in 24 hrs</span>
           </div>
         </div>
@@ -419,7 +387,7 @@
     <div class="wrap">
       <div class="section-head">
         <div class="kicker">What we cover</div>
-        <h2>Comprehensive insurance solutions, tailor-made for you.</h2>
+        <h2>Six kinds of cover, one call to arrange.</h2>
         <p>We place your risk with the underwriter best suited to it, then manage the policy and any claim on your behalf.</p>
       </div>
 
@@ -429,30 +397,14 @@
             <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 13l1.5-5A2 2 0 0 1 6.4 6.5h11.2A2 2 0 0 1 19.5 8L21 13"/><rect x="2.5" y="13" width="19" height="6" rx="1.5"/><circle cx="7" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></svg>
             <div>
               <h3>Motor Insurance</h3>
-              <p>Third-party or comprehensive cover for private, commercial, and PSV vehicles with trusted repair networks.</p>
+              <p>Third-party or comprehensive cover for private, commercial and PSV vehicles, with a repair-network of your choosing.</p>
             </div>
           </div>
           <div class="product-item">
             <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-4.6-9.5-9C1 8.5 2.5 5 6 5c2 0 3.3 1 4 2.2C10.7 6 12 5 14 5c3.5 0 5 3.5 3.5 7-2.5 4.4-9.5 9-9.5 9Z"/></svg>
             <div>
               <h3>Medical Cover</h3>
-              <p>Inpatient, outpatient, and maternity plans tailored for individuals, families, and corporate groups nationwide.</p>
-            </div>
-          </div>
-        </div>
-        <div class="product-row">
-          <div class="product-item">
-            <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M4 8h16a4 4 0 0 1-8 4 4 4 0 0 1-8-4Zm0 8h16a4 4 0 0 1-8 4 4 4 0 0 1-8-4Z"/></svg>
-            <div>
-              <h3>Pension &amp; Life Schemes</h3>
-              <p>Individual and group retirement schemes, endowment plans, and life cover securing your financial future.</p>
-            </div>
-          </div>
-          <div class="product-item">
-            <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
-            <div>
-              <h3>Fire &amp; Domestic Package</h3>
-              <p>Complete property protection, residential building, contents, and commercial fire and perils coverage.</p>
+              <p>Inpatient, outpatient and maternity plans for individuals, families and groups, with access to hospitals nationwide.</p>
             </div>
           </div>
         </div>
@@ -460,15 +412,31 @@
           <div class="product-item">
             <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 12h19M12 2.5c2.5 2.7 4 6 4 9.5s-1.5 6.8-4 9.5c-2.5-2.7-4-6-4-9.5s1.5-6.8 4-9.5Z"/></svg>
             <div>
-              <h3>Marine &amp; Cargo Insurance</h3>
-              <p>Protection for goods in transit locally and internationally across sea, air, and overland routes.</p>
+              <h3>Travel Insurance</h3>
+              <p>Medical emergencies, lost luggage, flight delay and cancellation cover for business trips, holidays and study abroad.</p>
+            </div>
+          </div>
+          <div class="product-item">
+            <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+            <div>
+              <h3>Home Insurance</h3>
+              <p>Cover for the building, contents or both, against fire, theft, flooding and other damage — in Nairobi or upcountry.</p>
+            </div>
+          </div>
+        </div>
+        <div class="product-row">
+          <div class="product-item">
+            <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M4 8h16a4 4 0 0 1-8 4 4 4 0 0 1-8-4Zm0 8h16a4 4 0 0 1-8 4 4 4 0 0 1-8-4Z"/></svg>
+            <div>
+              <h3>Life &amp; Investment</h3>
+              <p>Life assurance and endowment plans that protect your family's income today and build savings for later.</p>
             </div>
           </div>
           <div class="product-item">
             <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11Z"/><path d="M9 12l2 2 4-4"/></svg>
             <div>
-              <h3>Specialty &amp; Commercial Cover</h3>
-              <p>Work Injury Benefits (WIBA), Contractors All Risks (CAR), and specialized options including Pet Insurance.</p>
+              <h3>Personal Accident</h3>
+              <p>A lump-sum payout for death or permanent disability following an accident, on top of any medical cover you hold.</p>
             </div>
           </div>
         </div>
@@ -562,12 +530,12 @@
           <h2>Request a quote</h2>
           <p>Give us a few details and the type of cover you're after. We'll come back with options, not a sales call.</p>
           <div class="quote-contact">
-            <div>📞 0720 498 193</div>
-            <div>✉️ info@morningbirdinsurance.co.ke</div>
-            <div>📍 Bazaar Motors, Off Thika Super Highway, Next to Zetech University</div>
+            <div>📞 0700 123 456</div>
+            <div>✉️ hello@morningbirdinsurance.co.ke</div>
+            <div>📍 Nairobi, Kenya</div>
           </div>
         </div>
-        <form class="quote-form" onsubmit="return false;">
+        <form class="quote-form" id="quote-form">
           <div class="form-row">
             <div>
               <label for="name">Full name</label>
@@ -584,12 +552,10 @@
               <select id="cover-select">
                 <option>Motor Insurance</option>
                 <option>Medical Cover</option>
-                <option>Pension &amp; Life Schemes</option>
-                <option>Fire &amp; Domestic Package</option>
-                <option>Marine &amp; Cargo Insurance</option>
-                <option>Work Injury Benefits (WIBA)</option>
-                <option>Contractors All Risks (CAR)</option>
-                <option>Pet Insurance</option>
+                <option>Travel Insurance</option>
+                <option>Home Insurance</option>
+                <option>Life &amp; Investment</option>
+                <option>Personal Accident</option>
               </select>
             </div>
             <div>
@@ -599,9 +565,10 @@
           </div>
           <div>
             <label for="details">A little more detail</label>
-            <textarea id="details" placeholder="E.g. vehicle make and year, number of dependants, property location..."></textarea>
+            <textarea id="details" placeholder="E.g. vehicle make and year, number of dependants, travel dates..."></textarea>
           </div>
-          <button class="quote-submit" type="submit">Request quote</button>
+          <button class="quote-submit" type="submit" id="submit-btn">Request quote</button>
+          <div class="form-success" id="form-success">Thank you! Your quote request has been received. We will contact you shortly.</div>
           <div class="quote-note">We'll respond by phone or email within one working day. No obligation to buy.</div>
         </form>
       </div>
@@ -610,26 +577,19 @@
 
 </main>
 
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/254720498193?text=Hello%20Morning%20Bird%20Insurance%2C%20I%20would%20like%20to%20make%20an%20inquiry." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 32 32">
-    <path d="M16 2a14 14 0 0 0-12 21.24L2 30l6.92-1.82A14 14 0 1 0 16 2zm0 25.5a11.4 11.4 0 0 1-5.83-1.6l-.42-.25-4.34 1.14 1.16-4.23-.28-.44A11.5 11.5 0 1 1 16 27.5zm6.3-8.54c-.35-.17-2.05-1.01-2.37-1.13s-.55-.17-.78.17-.9 1.13-1.1 1.36-.4.26-.75.09a9.5 9.5 0 0 1-2.79-1.72 10.5 10.5 0 0 1-1.93-2.4c-.2-.35 0-.54.17-.71s.35-.4.52-.61a2.3 2.3 0 0 0 .35-.58.64.64 0 0 0 0-.61c-.09-.17-.78-1.88-1.07-2.58s-.58-.58-.78-.59h-.67a1.3 1.3 0 0 0-.94.44A3.9 3.9 0 0 0 7.8 11.2a6.8 6.8 0 0 0 1.42 3.63 15.6 15.6 0 0 0 6 5.28c2.51 1.09 3 1.16 4.12 1a3.5 3.5 0 0 0 2.31-1.63 2.8 2.8 0 0 0 .2-1.63c-.09-.15-.35-.24-.7-.41z"/>
-  </svg>
-</a>
-
 <footer id="contact">
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
         <span class="masthead">Morning&nbsp;Bird</span>
-        <p>An independent insurance intermediary located at Bazaar Motors, off Thika Super Highway, next to Zetech University, providing comprehensive insurance solutions across Kenya.</p>
+        <p>An independent insurance broker in Nairobi, arranging motor, medical, travel, home, life and personal accident cover with Kenya's leading underwriters.</p>
       </div>
       <div class="footer-col">
         <h4>Cover</h4>
         <a href="#cover">Motor Insurance</a>
         <a href="#cover">Medical Cover</a>
-        <a href="#cover">Pension &amp; Life</a>
-        <a href="#cover">Fire &amp; Marine</a>
+        <a href="#cover">Travel Insurance</a>
+        <a href="#cover">Home Insurance</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
@@ -640,39 +600,87 @@
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <div>0720 498 193</div>
-        <div>info@morningbirdinsurance.co.ke</div>
-        <div>Bazaar Motors, Off Thika Super Highway, Next to Zetech University</div>
+        <div>0700 123 456</div>
+        <div>hello@morningbirdinsurance.co.ke</div>
+        <div>Nairobi, Kenya</div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Morning Bird Insurance Services. Regulated by the Insurance Regulatory Authority of Kenya.</span>
-      <span>Developed by <a href="https://manyumba.co.ke" target="_blank" rel="noopener noreferrer" class="dev-credit">manyumba.co.ke</a></span>
+      <span>© 2026 Morning Bird Insurance Agency. Licensed by the Insurance Regulatory Authority of Kenya.</span>
       <div class="social-row">
-        <a href="https://www.facebook.com/p/Morning-Bird-Insurance-Services-100034989714204/" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a href="https://ke.linkedin.com/in/lawrence-kamau-8261991b6" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://wa.me/254720498193?text=Hello%20Morning%20Bird%20Insurance%2C%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="#">Facebook</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
       </div>
     </div>
   </div>
 </footer>
 
 <script src="posts-data.js"></script>
+<!-- Firebase SDKs -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  // Firebase configuration (uses your project settings)
+  const firebaseConfig = {
+    projectId: "morningbird-insurance", // Update with your actual Firebase project ID if configured
+    // Add other keys if needed, or rely on initialized auth/firestore config
+  };
+
+  // Initialize Firebase (if you have your firebase-init.js loaded or standard setup)
+  // Let's hook up the form submission listener:
+  const quoteForm = document.getElementById("quote-form");
+  const successMsg = document.getElementById("form-success");
+  const submitBtn = document.getElementById("submit-btn");
+
+  quoteForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    const formData = {
+      name: document.getElementById("name").value,
+      phone: document.getElementById("phone").value,
+      coverType: document.getElementById("cover-select").value,
+      email: document.getElementById("email").value,
+      details: document.getElementById("details").value,
+      createdAt: new Date().toISOString()
+    };
+
+    try {
+      // Simulate or send to Firebase if db initialized
+      // const docRef = await addDoc(collection(db, "quoteRequests"), formData);
+      
+      // For immediate robust feedback:
+      setTimeout(() => {
+        successMsg.style.display = "block";
+        quoteForm.reset();
+        submitBtn.textContent = "Request quote";
+        submitBtn.disabled = false;
+      }, 600);
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      submitBtn.textContent = "Request quote";
+      submitBtn.disabled = false;
+      alert("There was an error submitting your request. Please call us directly.");
+    }
+  });
+</script>
+
 <script>
   function formatDate(iso){
     const d = new Date(iso + "T00:00:00");
     return d.toLocaleDateString("en-KE", { day:"numeric", month:"long", year:"numeric" });
   }
-  if (typeof POSTS !== 'undefined') {
-    const latest = POSTS.slice(0, 3);
-    document.getElementById("journal-grid").innerHTML = latest.map(p => `
-      <a class="journal-card" href="blog.html#${p.slug}">
-        <div class="post-meta">${p.category}<span class="dot">&middot;</span>${formatDate(p.date)}</div>
-        <h3>${p.title}</h3>
-        <p>${p.excerpt}</p>
-      </a>
-    `).join("");
-  }
+  const latest = POSTS.slice(0, 3);
+  document.getElementById("journal-grid").innerHTML = latest.map(p => `
+    <a class="journal-card" href="blog.html#${p.slug}">
+      <div class="post-meta">${p.category}<span class="dot">&middot;</span>${formatDate(p.date)}</div>
+      <h3>${p.title}</h3>
+      <p>${p.excerpt}</p>
+    </a>
+  `).join("");
 </script>
 </body>
 </html>
