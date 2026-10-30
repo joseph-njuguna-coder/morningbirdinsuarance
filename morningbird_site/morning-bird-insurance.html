@@ -7,7 +7,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
 <!-- Structured Data for SEO (Insurance Agency) -->
 <script type="application/ld+json">
 {
@@ -31,17 +30,17 @@
 
 <style>
   :root{
-    --ink:#122142;
-    --ink-soft:#1c2f57;
-    --plum:#5c3c58;
-    --amber:#dc9c3f;
-    --amber-soft:#f1c37c;
-    --sky:#eef1ec;
-    --paper:#f8f5ee;
+    --ink:#0d2455;
+    --ink-soft:#173a8a;
+    --plum:#a3162a;
+    --amber:#d62839;
+    --amber-soft:#ff9aa2;
+    --sky:#eaf0fa;
+    --paper:#f5f8fd;
     --text:#182238;
     --text-muted:#57627a;
-    --line: rgba(18,33,66,0.14);
-    --line-light: rgba(248,245,238,0.28);
+    --line: rgba(13,36,85,0.14);
+    --line-light: rgba(245,248,253,0.28);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -69,7 +68,7 @@
   /* ---------- Header ---------- */
   header{
     position:sticky;top:0;z-index:40;
-    background:rgba(238,241,236,0.92);
+    background:rgba(234,240,250,0.92);
     backdrop-filter:blur(8px);
     border-bottom:1px solid var(--line);
   }
@@ -93,6 +92,7 @@
     white-space:nowrap;
   }
   .call-btn svg{width:15px;height:15px;flex:none;}
+  .nav-toggle{display:none;}
 
   /* ---------- Hero / masthead ---------- */
   .hero{
@@ -135,7 +135,7 @@
     max-width:11ch;
   }
   .hero-copy p{
-    margin:22px 0 0;font-size:1.08rem;color:rgba(248,245,238,0.82);
+    margin:22px 0 0;font-size:1.08rem;color:rgba(245,248,253,0.82);
     max-width:38ch;
   }
   .hero-ctas{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
@@ -144,26 +144,26 @@
     padding:13px 24px;border-radius:2px;font-size:0.95rem;font-weight:500;
     text-decoration:none;border:1px solid transparent;
   }
-  .btn-primary{background:var(--amber);color:var(--ink);}
-  .btn-primary:hover{background:var(--amber-soft);}
-  .btn-ghost{border-color:rgba(248,245,238,0.5);color:var(--paper);}
+  .btn-primary{background:var(--amber);color:#fff;}
+  .btn-primary:hover{background:#b81f2e;}
+  .btn-ghost{border-color:rgba(245,248,253,0.5);color:var(--paper);}
   .btn-ghost:hover{border-color:var(--paper);}
   .hero-trust{
-    margin-top:34px;font-size:0.82rem;color:rgba(248,245,238,0.65);
+    margin-top:34px;font-size:0.82rem;color:rgba(245,248,253,0.65);
     display:flex;align-items:center;gap:10px;
   }
   .hero-trust svg{width:14px;height:14px;flex:none;}
 
   .hero-art{
     position:relative;aspect-ratio:1/1.02;
-    border:1px solid rgba(248,245,238,0.35);
+    border:1px solid rgba(245,248,253,0.35);
     animation:rise 1s .35s cubic-bezier(.2,.7,.25,1) both;
   }
   @media (prefers-reduced-motion:reduce){.hero-art{animation:none;}}
   @keyframes rise{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
   .hero-art-caption{
     position:absolute;left:0;right:0;bottom:-30px;
-    font-size:0.72rem;color:rgba(248,245,238,0.55);
+    font-size:0.72rem;color:rgba(245,248,253,0.55);
     display:flex;justify-content:space-between;
   }
 
@@ -204,7 +204,7 @@
 
   /* ---------- How it works ---------- */
   .how{background:var(--paper);border-top:1px solid var(--line);}
-  .how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
+  .how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:step;}
   .how-step{position:relative;padding-left:0;}
   .how-num{
     font-family:"Fraunces",serif;font-size:2.6rem;color:var(--amber);
@@ -229,8 +229,8 @@
   /* ---------- Partners strip ---------- */
   .partners{background:var(--ink);color:var(--paper);padding:44px 0;}
   .partners-inner{display:flex;align-items:center;gap:40px;flex-wrap:wrap;justify-content:space-between;}
-  .partners-label{font-size:0.82rem;color:rgba(248,245,238,0.6);white-space:nowrap;}
-  .partner-names{display:flex;gap:34px;flex-wrap:wrap;font-family:"Fraunces",serif;font-size:1.05rem;color:rgba(248,245,238,0.85);}
+  .partners-label{font-size:0.82rem;color:rgba(245,248,253,0.6);white-space:nowrap;}
+  .partner-names{display:flex;gap:34px;flex-wrap:wrap;font-family:"Fraunces",serif;font-size:1.05rem;color:rgba(245,248,253,0.85);}
 
   /* ---------- Quote form ---------- */
   .quote{background:var(--sky);}
@@ -241,46 +241,59 @@
   }
   .quote-intro{padding:56px;border-right:1px solid var(--line-light);}
   .quote-intro h2{color:var(--paper);font-size:1.9rem;line-height:1.15;}
-  .quote-intro p{color:rgba(248,245,238,0.75);margin-top:16px;font-size:0.98rem;max-width:34ch;}
-  .quote-contact{margin-top:34px;font-size:0.92rem;color:rgba(248,245,238,0.85);}
+  .quote-intro p{color:rgba(245,248,253,0.75);margin-top:16px;font-size:0.98rem;max-width:34ch;}
+  .quote-contact{margin-top:34px;font-size:0.92rem;color:rgba(245,248,253,0.85);}
   .quote-contact div{margin-bottom:8px;}
   .quote-form{padding:56px;display:grid;gap:18px;}
   .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
   label{display:block;font-size:0.78rem;color:var(--amber-soft);margin-bottom:7px;letter-spacing:0.01em;}
   input, select, textarea{
-    width:100%;background:transparent;border:none;border-bottom:1px solid rgba(248,245,238,0.35);
+    width:100%;background:transparent;border:none;border-bottom:1px solid rgba(245,248,253,0.35);
     color:var(--paper);font-family:"IBM Plex Sans",sans-serif;font-size:0.96rem;padding:9px 2px;
   }
   select option{color:var(--ink);}
-  input::placeholder, textarea::placeholder{color:rgba(248,245,238,0.4);}
+  input::placeholder, textarea::placeholder{color:rgba(245,248,253,0.4);}
   input:focus, select:focus, textarea:focus{outline:none;border-bottom-color:var(--amber);}
   textarea{resize:vertical;min-height:64px;}
   .quote-submit{
     margin-top:8px;justify-self:start;
-    background:var(--amber);color:var(--ink);border:none;
+    background:var(--amber);color:#fff;border:none;
     padding:13px 26px;font-size:0.95rem;font-weight:600;border-radius:2px;cursor:pointer;
   }
-  .quote-submit:hover{background:var(--amber-soft);}
-  .quote-note{font-size:0.78rem;color:rgba(248,245,238,0.5);margin-top:4px;}
+  .quote-submit:hover{background:#b81f2e;}
+  .quote-note{font-size:0.78rem;color:rgba(245,248,253,0.5);margin-top:4px;}
   .form-success{color:var(--amber-soft);font-size:0.9rem;margin-top:10px;display:none;}
 
+  /* ---------- Photo frames (image1 - image10) ---------- */
+  .photo{position:relative;margin:0;overflow:hidden;background:rgba(13,36,85,0.05);border:1px dashed var(--line);}
+  .photo::before{content:attr(data-name) " \2014  photo goes here";position:absolute;inset:0;display:grid;place-items:center;font-size:0.78rem;color:var(--text-muted);text-align:center;padding:12px;}
+  .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .photo:has(img){border-color:transparent;}
+  .r-banner{aspect-ratio:21/8;margin-bottom:48px;}
+  .photo-hero{position:absolute;inset:0;z-index:1;border:none;background:none;}
+  .photo-hero::before{display:none;}
+  .product-item .photo{grid-column:1 / -1;aspect-ratio:16/10;margin-bottom:4px;}
+  .quote-intro .photo{aspect-ratio:16/9;margin-top:28px;border-color:rgba(245,248,253,0.3);background:rgba(245,248,253,0.06);}
+  .quote-intro .photo::before{color:rgba(245,248,253,0.6);}
+  @media (max-width:600px){.r-banner{aspect-ratio:16/9;}}
+
   /* ---------- Footer ---------- */
-  footer{background:var(--ink);color:rgba(248,245,238,0.75);padding:64px 0 28px;}
+  footer{background:var(--ink);color:rgba(245,248,253,0.75);padding:64px 0 28px;}
   .footer-top{
     display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;
     padding-bottom:44px;border-bottom:1px solid var(--line-light);
   }
   .footer-brand .masthead{color:var(--paper);font-size:1.4rem;}
-  .footer-brand p{color:rgba(248,245,238,0.6);font-size:0.9rem;margin-top:14px;max-width:32ch;}
+  .footer-brand p{color:rgba(245,248,253,0.6);font-size:0.9rem;margin-top:14px;max-width:32ch;}
   .footer-col h4{font-size:0.78rem;color:var(--amber-soft);margin:0 0 16px;letter-spacing:0.02em;font-weight:600;}
-  .footer-col a, .footer-col div{display:block;font-size:0.9rem;color:rgba(248,245,238,0.75);text-decoration:none;margin-bottom:10px;}
+  .footer-col a, .footer-col div{display:block;font-size:0.9rem;color:rgba(245,248,253,0.75);text-decoration:none;margin-bottom:10px;}
   .footer-col a:hover{color:var(--paper);}
   .footer-bottom{
     display:flex;justify-content:space-between;align-items:center;
-    padding-top:24px;font-size:0.78rem;color:rgba(248,245,238,0.5);flex-wrap:wrap;gap:12px;
+    padding-top:24px;font-size:0.78rem;color:rgba(245,248,253,0.5);flex-wrap:wrap;gap:12px;
   }
   .social-row{display:flex;gap:16px;}
-  .social-row a{color:rgba(248,245,238,0.6);text-decoration:none;font-size:0.78rem;}
+  .social-row a{color:rgba(245,248,253,0.6);text-decoration:none;font-size:0.78rem;}
   .social-row a:hover{color:var(--paper);}
 
   /* ---------- Responsive ---------- */
@@ -310,7 +323,7 @@
   <div class="header-inner">
     <a class="brand" href="#top">
       <svg class="brand-mark" viewBox="0 0 32 32" fill="none">
-        <path d="M2 20C7 12 13 8 18 8c2 0 3 1 3 3 0 3-3 5-7 5 3 1 7 1 10-1 3.5-2.3 5-6 6-9 .3 4-1 8.3-4 11.3C22.5 30 13 31 2 20Z" fill="#122142"/>
+        <path d="M2 20C7 12 13 8 18 8c2 0 3 1 3 3 0 3-3 5-7 5 3 1 7 1 10-1 3.5-2.3 5-6 6-9 .3 4-1 8.3-4 11.3C22.5 30 13 31 2 20Z" fill="#0d2455"/>
       </svg>
       <span class="brand-name">Morning&nbsp;Bird</span>
       <span class="brand-suffix">INSURANCE</span>
@@ -356,21 +369,22 @@
         </div>
 
         <div class="hero-art">
+          <figure class="photo photo-hero" data-fallback="remove"><img data-img="image1" alt="Morning Bird Insurance"></figure>
           <svg viewBox="0 0 400 410" width="100%" height="100%">
             <defs>
               <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#1c2f57"/>
-                <stop offset="55%" stop-color="#5c3c58"/>
-                <stop offset="100%" stop-color="#dc9c3f"/>
+                <stop offset="0%" stop-color="#173a8a"/>
+                <stop offset="55%" stop-color="#a3162a"/>
+                <stop offset="100%" stop-color="#d62839"/>
               </linearGradient>
             </defs>
             <rect x="0" y="0" width="400" height="410" fill="url(#skyGrad)"/>
-            <circle cx="200" cy="270" r="86" fill="#f1c37c" opacity="0.9"/>
-            <path d="M0 320c40-14 80-18 120-10s70 22 110 20 90-24 170-6v86H0Z" fill="#122142" opacity="0.55"/>
-            <path d="M0 350c50-10 100-8 150 2s90 16 130 6 70-20 120-14v66H0Z" fill="#122142" opacity="0.85"/>
+            <circle cx="200" cy="270" r="86" fill="#ff9aa2" opacity="0.9"/>
+            <path d="M0 320c40-14 80-18 120-10s70 22 110 20 90-24 170-6v86H0Z" fill="#0d2455" opacity="0.55"/>
+            <path d="M0 350c50-10 100-8 150 2s90 16 130 6 70-20 120-14v66H0Z" fill="#0d2455" opacity="0.85"/>
             <!-- bird -->
             <g transform="translate(120,120)">
-              <path d="M0 34C22 6 48-8 70 4c-12 2-22 10-26 20 18-2 36 4 48 16-16-4-30-2-40 6 14 4 26 14 32 26-14-10-28-14-40-12C58 78 40 88 20 88 34 78 42 64 40 50 26 62 10 66-6 62 8 56 18 46 20 34 10 40-4 40-14 34-4 32 4 24 0 34Z" fill="#f8f5ee"/>
+              <path d="M0 34C22 6 48-8 70 4c-12 2-22 10-26 20 18-2 36 4 48 16-16-4-30-2-40 6 14 4 26 14 32 26-14-10-28-14-40-12C58 78 40 88 20 88 34 78 42 64 40 50 26 62 10 66-6 62 8 56 18 46 20 34 10 40-4 40-14 34-4 32 4 24 0 34Z" fill="#f5f8fd"/>
             </g>
           </svg>
           <div class="hero-art-caption">
@@ -394,6 +408,7 @@
       <div class="product-index">
         <div class="product-row">
           <div class="product-item">
+            <figure class="photo " data-name="image2"><img data-img="image2" alt="Motor insurance" loading="lazy"></figure>
             <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 13l1.5-5A2 2 0 0 1 6.4 6.5h11.2A2 2 0 0 1 19.5 8L21 13"/><rect x="2.5" y="13" width="19" height="6" rx="1.5"/><circle cx="7" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></svg>
             <div>
               <h3>Motor Insurance</h3>
@@ -401,6 +416,7 @@
             </div>
           </div>
           <div class="product-item">
+            <figure class="photo " data-name="image3"><img data-img="image3" alt="Medical cover" loading="lazy"></figure>
             <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-4.6-9.5-9C1 8.5 2.5 5 6 5c2 0 3.3 1 4 2.2C10.7 6 12 5 14 5c3.5 0 5 3.5 3.5 7-2.5 4.4-9.5 9-9.5 9Z"/></svg>
             <div>
               <h3>Medical Cover</h3>
@@ -410,6 +426,7 @@
         </div>
         <div class="product-row">
           <div class="product-item">
+            <figure class="photo " data-name="image4"><img data-img="image4" alt="Travel insurance" loading="lazy"></figure>
             <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 12h19M12 2.5c2.5 2.7 4 6 4 9.5s-1.5 6.8-4 9.5c-2.5-2.7-4-6-4-9.5s1.5-6.8 4-9.5Z"/></svg>
             <div>
               <h3>Travel Insurance</h3>
@@ -417,6 +434,7 @@
             </div>
           </div>
           <div class="product-item">
+            <figure class="photo " data-name="image5"><img data-img="image5" alt="Home insurance" loading="lazy"></figure>
             <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
             <div>
               <h3>Home Insurance</h3>
@@ -426,6 +444,7 @@
         </div>
         <div class="product-row">
           <div class="product-item">
+            <figure class="photo " data-name="image6"><img data-img="image6" alt="Life and investment" loading="lazy"></figure>
             <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M4 8h16a4 4 0 0 1-8 4 4 4 0 0 1-8-4Zm0 8h16a4 4 0 0 1-8 4 4 4 0 0 1-8-4Z"/></svg>
             <div>
               <h3>Life &amp; Investment</h3>
@@ -433,6 +452,7 @@
             </div>
           </div>
           <div class="product-item">
+            <figure class="photo " data-name="image7"><img data-img="image7" alt="Personal accident cover" loading="lazy"></figure>
             <svg class="product-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11Z"/><path d="M9 12l2 2 4-4"/></svg>
             <div>
               <h3>Personal Accident</h3>
@@ -451,6 +471,7 @@
         <div class="kicker">Why Morning Bird</div>
         <h2>An independent broker, not a call centre.</h2>
       </div>
+      <figure class="photo r-banner" data-name="image8"><img data-img="image8" alt="Our team at work" loading="lazy"></figure>
       <div class="why-grid">
         <div class="why-card">
           <span class="why-index">01</span>
@@ -478,6 +499,7 @@
         <div class="kicker">Getting covered</div>
         <h2>Three steps, most of it by phone or email.</h2>
       </div>
+      <figure class="photo r-banner" data-name="image9"><img data-img="image9" alt="Getting covered with Morning Bird" loading="lazy"></figure>
       <div class="how-steps">
         <div class="how-step">
           <div class="how-num">1</div>
@@ -529,6 +551,7 @@
         <div class="quote-intro">
           <h2>Request a quote</h2>
           <p>Give us a few details and the type of cover you're after. We'll come back with options, not a sales call.</p>
+          <figure class="photo " data-name="image10"><img data-img="image10" alt="Contact Morning Bird" loading="lazy"></figure>
           <div class="quote-contact">
             <div>📞 0700 123 456</div>
             <div>✉️ hello@morningbirdinsurance.co.ke</div>
@@ -667,7 +690,6 @@
     }
   });
 </script>
-
 <script>
   function formatDate(iso){
     const d = new Date(iso + "T00:00:00");
@@ -681,6 +703,23 @@
       <p>${p.excerpt}</p>
     </a>
   `).join("");
+</script>
+<script>
+  /* Loads image1 ... image10. Edit IMG_DIRS / IMG_EXTS if your files live elsewhere. */
+  const IMG_DIRS = ["images/", ""];            // folder(s) to look in ("" = same folder as this file)
+  const IMG_EXTS = ["jpg", "jpeg", "png", "webp"];
+  document.querySelectorAll("img[data-img]").forEach(img => {
+    const tries = [];
+    IMG_DIRS.forEach(d => IMG_EXTS.forEach(e => tries.push(d + img.dataset.img + "." + e)));
+    let i = 0;
+    img.onerror = () => {
+      i++;
+      if (i < tries.length) { img.src = tries[i]; return; }
+      const f = img.closest("figure");
+      if (f && f.dataset.fallback === "remove") f.remove(); else img.remove();
+    };
+    img.src = tries[0];
+  });
 </script>
 </body>
 </html>
